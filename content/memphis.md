@@ -53,9 +53,9 @@ In 1942, patriotism and pride filled newspaper headlines: “Even before the Jap
 Then, [in July 1946](https://www.google.com/url?q=https://ww3.sam.usace.army.mil/DDMT/docs/AR428-1.pdf&sa=D&source=editors&ust=1662070397033349&usg=AOvVaw0vlO1a4MDL7hoRli_w6RvX), three freight cars filled with 500-pound German mustard bombs arrived in Memphis, leaking on the way from New Orleans to Pine Bluff, Arkansas and injuring some 100 workers. Once they were removed and neutralized in Memphis, the bombs needed to be buried, and Dunn Field — that rolling, grassy patch also used as a pistol range and to test flamethrowers — appeared to be the perfect location.
 
 The houses on Hays Road, the street that serves as Dunn Field’s eastern boundary, weren’t there yet.[\[h\]](#cmnt8) But less than a mile away, Ms. Doris’ family was busy building      what would become their three family homes, above creeks and drainage ditches, the arteries of the area.
-
+<!-- 
 ::superfund-site-explorer
-::
+:: -->
 
 ---
 
