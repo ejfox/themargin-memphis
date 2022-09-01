@@ -1,18 +1,7 @@
-<!-- ::hero-image{url="https://images.unsplash.com/photo-1482189349482-3defd547e0e9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1886&q=80"}
-:: -->
-
-<!-- ::date 
-17 Aug 2022 
-:: -->
-
-<!-- 
-
- -->
-
 # “We glow in the dark”
 ## A Memphis community demands reparations for unknowingly hosting the toxic waste of war
 
-::inset-image{url="/static/images/memphis-inset-locator.r2.png" width="350px"}
+::inset-image{url="/images/memphis-inset-locator.r2.png" width="350px"}
 ::
   
 It was October 1995, just as the cool evenings set in, in Memphis, Tennessee, when things began making sense to Doris Bradshaw[\[a\]](#cmnt1).
@@ -27,7 +16,7 @@ On the afternoon of the meeting, families packed the Norris Elementary school ca
 
 There was another thing everyone in the room had in common that day: they lived within walking distance of the 600-acre Defense Depot and a 60-acre parcel just north known as Dunn Field, which some families looked out onto from their front stoops. Despite its being fenced off, the field appeared to be a perfect place to picnic, under the shade of oak trees that speckled rolling hills and grass-filled flatlands. But oddities sometimes showed up at the field, like a concrete dome or a stack of long metal rods. And then there was the unseen. Although Dunn Field’s neighbors didn’t know it at the time, behind barbed wire and beneath the soil, mustard bombs had been buried decades ago, laid to rest near dozens of other categories of waste[\[b\]](#cmnt2), including lewisite (a chemical weapon); plane crash residue; and 55-gallon drums of oil, grease, and paint thinner.
 
-![A map showing the location of Tennesee the southwestern corner highlighting the City of Memphis](/static/images/memphis_satellite_locator.r1.png)
+![A map showing the location of Tennesee the southwestern corner highlighting the City of Memphis](/images/memphis_satellite_locator.r1.png)
 
 Residents couldn’t recall signs of warning, but the papers occasionally reported on the Defense Depot. In 1959, a local newspaper, the Commercial Appeal,[\[c\]](#cmnt3) described one incident:
 
@@ -37,7 +26,7 @@ Government officials, meanwhile, were well aware of the danger. In October 1992,
 
 In that jam-packed Norris Elementary cafeteria, Doris and her neighbors made a formal promise to get to the bottom of the illnesses that touched them all. They would call themselves the Defense Depot Memphis Tennessee Concerned Citizens’ Committee (DDMT-CCC). With a name and a mission, the group began receiving press attention. Soon, Doris received calls from every corner of the United States, confirming that she and her neighbors were far from the only people living near shuttering military sites who were suffering from a host of cancers and other illnesses.
 
-According to the Government Accountability Office, Department of Defense activities have contaminated [millions of acres](https://www.google.com/url?q=https://www.gao.gov/static/gao-10-348.pdf&sa=D&source=editors&ust=1662070397029498&usg=AOvVaw0KHl4Vzj1l1eBxxOYenl1q) of soil and water on and around military sites, over 100 of which the EPA has brought into the Superfund program. While the majority of the existing 1,322 Superfund sites are or were previously owned by private companies, in the case of the Defense Depot, the federal government is both the cleanup authority and the polluting party, which has contributed to skepticism surrounding how forthcoming officials have been about contamination levels and cleanup progress. Residents’ apprehension appears to be for good reason. [Over one-quarter](https://www.google.com/url?q=https://www.epa.gov/superfund/deleted-national-priorities-list-npl-sites-deletion-date&sa=D&source=editors&ust=1662070397029940&usg=AOvVaw3yoaoGb2ELlBT3vdhEcx5J) of private Superfund sites have been “deleted” from the list following the EPA’s determination that enough cleanup has occurred. By comparison, only [8 percent](https://www.google.com/url?q=https://www.epa.gov/superfund/deleted-national-priorities-list-npl-sites-deletion-date&sa=D&source=editors&ust=1662070397030458&usg=AOvVaw0rlL9LfPM_oRpzCt26Fmvk) of military Superfund sites have seen full cleanups.[\[e\]](#cmnt5)
+According to the Government Accountability Office, Department of Defense activities have contaminated [millions of acres](https://www.google.com/url?q=https://www.gao.gov/gao-10-348.pdf&sa=D&source=editors&ust=1662070397029498&usg=AOvVaw0KHl4Vzj1l1eBxxOYenl1q) of soil and water on and around military sites, over 100 of which the EPA has brought into the Superfund program. While the majority of the existing 1,322 Superfund sites are or were previously owned by private companies, in the case of the Defense Depot, the federal government is both the cleanup authority and the polluting party, which has contributed to skepticism surrounding how forthcoming officials have been about contamination levels and cleanup progress. Residents’ apprehension appears to be for good reason. [Over one-quarter](https://www.google.com/url?q=https://www.epa.gov/superfund/deleted-national-priorities-list-npl-sites-deletion-date&sa=D&source=editors&ust=1662070397029940&usg=AOvVaw3yoaoGb2ELlBT3vdhEcx5J) of private Superfund sites have been “deleted” from the list following the EPA’s determination that enough cleanup has occurred. By comparison, only [8 percent](https://www.google.com/url?q=https://www.epa.gov/superfund/deleted-national-priorities-list-npl-sites-deletion-date&sa=D&source=editors&ust=1662070397030458&usg=AOvVaw0rlL9LfPM_oRpzCt26Fmvk) of military Superfund sites have seen full cleanups.[\[e\]](#cmnt5)
 
 On top of severe health impacts, this lag on the part of government agencies has had a crippling economic effect on impacted communities. Researchers have suggested that property values can rebound after Superfund cleanup occurs. The delay in cleanup at the Depot and other military Superfund sites, in what are disproportionately communities of color, may also curb generational wealth building, thus contributing to the racial wealth gap.
 
