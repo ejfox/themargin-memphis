@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import * as d3 from 'd3'
+import { json } from 'd3'
 import * as mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 
@@ -58,7 +58,7 @@ export default {
 
       // use d3.json to load geojson and add it to mapbox map
 
-      d3.json('/superfund_sites.geojson').then((data, err) => {
+      json('/superfund_sites.geojson').then((data, err) => {
         if (err) {
           console.log(err)
         } else {
