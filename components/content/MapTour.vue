@@ -4,7 +4,7 @@
     <h2 class="bg-blue white ph2 sticky top-2 h1 f6 z-3">
       {{ containerScrollY }}
     </h2> -->
-    <div id="map" class="w-100 vh-100 z-1" ref="mapRoot"></div>
+    <div id="map" class="w-100 vh-80 z-1" ref="mapRoot"></div>
 
     <!-- color legend for all locations -->
 
