@@ -10,13 +10,16 @@ Earlier that year, her 84-year-old grandmother, Suzie Hall, had found a few drop
 
 In the weeks prior to her grandmother’s death, Doris had pushed aside an unusual piece of mail: a thick booklet with a white address sticker pasted onto the corner. “There may be some contamination in your community,” she recalls it reading. Doris called the number on the mailer, hoping to speak with someone at the Agency for Toxic Substances and Disease Registry (ATSDR), which had sent out the information. No one answered. In the whirlwind of caring for her grandmother, the pamphlet slipped away.
 
+![A map showing the location of Tennesee the southwestern corner highlighting the City of Memphis](/images/memphis_satellite_locator.r1.png)
+
 But soon after her grandmother passed, Doris dug up the booklet again, suspecting a connection. It turned out that the government was suggesting potential toxicity at the [Memphis Defense Depot](https://www.google.com/url?q=https://cumulis.epa.gov/supercpad/cursites/csitinfo.cfm?id%3D0404159&sa=D&source=editors&ust=1662070397025267&usg=AOvVaw2921pv2OMTmSMaxM4DFY36) — a sprawling site that the U.S. military had, for the past 50 years, used as a distribution and disposal center for munition, medical supplies, and petroleum products — just blocks away from the Bradshaws. The letter was vague, but it seemed like something everyone should be talking about. Doris drew up some flyers with a skull and crossbones image in the center, calling for a meeting at her children’s school.
 
 On the afternoon of the meeting, families packed the Norris Elementary school cafeteria. Only some in attendance had received that same ominous mailer. But just about everyone had a story about a family member or neighbors who’d dealt with an odd combination of lethal conditions: kidney disease, brain cancer, or fibroids the size of a cantaloupe.
 
 There was another thing everyone in the room had in common that day: they lived within walking distance of the 600-acre Defense Depot and a 60-acre parcel just north known as Dunn Field, which some families looked out onto from their front stoops. Despite its being fenced off, the field appeared to be a perfect place to picnic, under the shade of oak trees that speckled rolling hills and grass-filled flatlands. But oddities sometimes showed up at the field, like a concrete dome or a stack of long metal rods. And then there was the unseen. Although Dunn Field’s neighbors didn’t know it at the time, behind barbed wire and beneath the soil, mustard bombs had been buried decades ago, laid to rest near dozens of other categories of waste[\[b\]](#cmnt2), including lewisite (a chemical weapon); plane crash residue; and 55-gallon drums of oil, grease, and paint thinner.
 
-![A map showing the location of Tennesee the southwestern corner highlighting the City of Memphis](/images/memphis_satellite_locator.r1.png)
+::map-tour
+::
 
 Residents couldn’t recall signs of warning, but the papers occasionally reported on the Defense Depot. In 1959, a local newspaper, the Commercial Appeal,[\[c\]](#cmnt3) described one incident:
 
