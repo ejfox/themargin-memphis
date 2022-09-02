@@ -24,7 +24,7 @@
       </div>
     </div>
 
-    <div class="map-text relative z-999">
+    <div class="map-text relative z-999 ml5-l">
       <p class="c3">
         <span class="c1"
           >But soon after her grandmother passed, Ms. Doris dug up the booklet
@@ -54,10 +54,6 @@
           streets and make sure residents on all sides of the Defense Depot got
           one.</span
         >
-        <!-- 
-            -Hamilton High School: 1363 E Person Ave, Memphis, TN 38106 // Lat: 35.100182 Lng: -90.017372
-
-            -->
       </p>
 
       <p class="c3">
@@ -96,20 +92,6 @@ import { centerOfMass, point, featureCollection, feature } from '@turf/turf'
 import * as mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 
-/* location info:
-
--Memphis Depot: 2028 Memphis Depot Pkwy, Memphis, TN  38106 (former Depot bounded by Dunn Ave, Perry Rd, Ball Rd, Airway Blvd) // Lat: 35.086520 -Lng: 89.995420
-
--Family home impacted by Dunn Field contents: 1835 Rozelle St, Memphis, TN 38106 // Lat: 35.095190 Lng: -90.007340
-
--Hamilton High School: 1363 E Person Ave, Memphis, TN 38106 // Lat: 35.100182 Lng: -90.017372
-
--Ms. Doris home: 1454 E Mallory Ave, Memphis, TN 38106 // Lat: 35.085660 Lng: -90.014430
-
--Frank Sr. former home: 772 Porter St, Memphis, TN 38126 // Lat: 35.125870 Lng: -90.036200
-
-*/
-
 export default {
   name: 'MemphisContextHeroMap',
   props: {
@@ -123,8 +105,8 @@ export default {
       map: null,
       containerScrollY: 0,
       focused: false,
-      initialZoom: 5,
-      focusedZoom: 13,
+      initialZoom: 4,
+      focusedZoom: 14,
       locations: [
         {
           name: 'Memphis Depot',
@@ -210,7 +192,7 @@ export default {
         function () {
           this.map.setStyle('mapbox://styles/mapbox/satellite-v9')
         }.bind(this),
-        zoomDuration + 100
+        zoomDuration + 25
       )
     },
     onMapLoaded: function () {
@@ -253,12 +235,7 @@ export default {
       this.map = new mapboxgl.Map({
         container: this.$refs.mapRoot,
         style: 'mapbox://styles/mapbox/streets-v11',
-        // satellite style
-        //style: 'mapbox://styles/mapbox/satellite-v9',
-        // -Memphis Depot: 2028 Memphis Depot Pkwy, Memphis, TN  38106 (former Depot bounded by Dunn Ave, Perry Rd, Ball Rd, Airway Blvd) // Lat: 35.086520 -Lng: 89.995420
-        // use Memphis Depot for center
         center: [-89.99542, 35.08652],
-
         // make center centerOfMass of all locations
         // center: this.calcCenterOfMass(),
         zoom: this.initialZoom,
@@ -291,8 +268,8 @@ export default {
 }
 
 p {
-  /* margin-top: 25vh; */
-  margin-bottom: 66vh;
+  margin-bottom: 33vh;
+
   padding: 2em 1.2em;
   margin-left: 2vw;
   line-height: 1.3em;

@@ -25,7 +25,15 @@ Residents couldn’t recall signs of warning, but the papers occasionally report
 
 “The Army fell on troubled times yesterday, trying to bury 20 tons of chemicals,” the story read, describing a 125-foot ditch disposal site at the Depot. “Rain set it ‘afire.’ Bulldozers tried to cover it with dirt. It just added to a churning mess which sent up a big orange cloud. Then an ill wind sent an irritating odor over much of Southeast Memphis.”
 
+::inset-image{url="/images/memphis_graphics_superfundsites.r1.png" width="350px"}
+::
+
 Government officials, meanwhile, were well aware of the danger. In October 1992, after 10 years of U.S. Army–commissioned assessments[\[d\]](#cmnt4), the Environmental Protection Agency (EPA) added the Defense Depot to its inventory of most contaminated places in the United States, noting [in its decision](https://www.google.com/url?q=https://semspub.epa.gov/work/04/10115971.pdf&sa=D&source=editors&ust=1662070397027557&usg=AOvVaw3D3DXufCvBbpZc2JoGTuaw) the need to remove 7,200 square feet of soil contaminated with lead and remediate chlorinated volatile organic compounds (VOCs) from groundwater because of their “current and potential risk to human health.” Since then, the Depot has remained on the National Priorities List, also known as the Superfund program. The program lists thousands of toxic waste sites across the country in need of cleanup. Superfund sites [disproportionately impact](https://www.google.com/url?q=https://www.epa.gov/sites/default/files/2021-06/documents/superfund_remediation_and_redevelopment_for_environmental_justice_communities_may_2021_report.pdf&sa=D&source=editors&ust=1662070397028092&usg=AOvVaw3Lni0kU8OVHWX_c5FoXwTq) communities of color. Doris’ census tract, for instance, is [93% Black](https://www.google.com/url?q=https://ejscreen.epa.gov/mapper/demogreportpdf.aspx?report%3Dacs2019&sa=D&source=editors&ust=1662070397028411&usg=AOvVaw34mfL7xnjd09cS0ELfzsq_) and in the [98th percentile](https://www.google.com/url?q=https://ejscreen.epa.gov/mapper/&sa=D&source=editors&ust=1662070397028733&usg=AOvVaw2vpPr08mFdw0ESTvlWUg9I) in terms of proximity to a Superfund site.
+
+
+
+<!-- ::superfund-site-explorer
+:: -->
 
 In that jam-packed Norris Elementary cafeteria, Doris and her neighbors made a formal promise to get to the bottom of the illnesses that touched them all. They would call themselves the Defense Depot Memphis Tennessee Concerned Citizens’ Committee (DDMT-CCC). With a name and a mission, the group began receiving press attention. Soon, Doris received calls from every corner of the United States, confirming that she and her neighbors were far from the only people living near shuttering military sites who were suffering from a host of cancers and other illnesses.
 
