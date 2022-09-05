@@ -1,6 +1,6 @@
 <template>
   <section class="">
-    <!-- <h1 v-if="pending" class="bg-black white tc pa5">Loading data</h1> -->
+    <!-- <h1 v-if="pending" class="bg-black white tc pa5">Loading superfundData</h1> -->
     <div
       id="superfund-map"
       ref="superfundMapRoot"
@@ -12,13 +12,13 @@
 <script setup>
 import * as mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
-import * as data from '~/assets/superfund_sites.json'
+import * as superfundData from '~/assets/superfund_sites.json'
 
 const map = ref(null)
 const initialZoom = 4
 
 onMounted(() => {
-  console.log('data', data)
+  console.log('superfundData', superfundData)
 
   map.value = new mapboxgl.Map({
     container: 'superfund-map',
@@ -35,9 +35,7 @@ onMounted(() => {
       positionOptions: {
         enableHighAccuracy: true,
       },
-      // When active the map will receive updates to the device's location as it changes.
       trackUserLocation: true,
-      // Draw an arrow next to the location dot to indicate which direction the device is heading.
       showUserHeading: true,
       fitBoundsOptions: {
         maxZoom: 11,
@@ -51,11 +49,10 @@ onMounted(() => {
         type: 'circle',
         source: {
           type: 'geojson',
-          data: data,
+          data: superfundData,
         },
         paint: {
           'circle-radius': ['/', ['get', 'Site Score'], 6],
-          // make all circles red
           'circle-color': 'rgba(255,0,0,0.25)',
         },
       })
@@ -68,14 +65,13 @@ onMounted(() => {
         type: 'symbol',
         source: {
           type: 'geojson',
-          data: data,
+          data: superfundData,
         },
         layout: {
           'text-field': ['get', 'Site Name'],
           'text-variable-anchor': ['top', 'bottom', 'left', 'right'],
           'text-radial-offset': 0.8,
           'text-justify': 'auto',
-          // make font size 10
           'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
           'text-size': 9,
         },

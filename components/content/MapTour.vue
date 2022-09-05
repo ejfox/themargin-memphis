@@ -1,10 +1,11 @@
+"
 <template>
   <section class="hero-map-container ba b--white" ref="root">
     <!-- <h2 class="bg-red yellow ph2 sticky top-0 h1 f6 z-3">{{ scrollY }}</h2>
     <h2 class="bg-blue white ph2 sticky top-2 h1 f6 z-3">
       {{ containerScrollY }}
     </h2> -->
-    <div id="map" class="w-100 vh-80 z-1" ref="mapRoot"></div>
+    <div id="map" class="w-100 vh-100 z-1 top-0" ref="mapRoot"></div>
 
     <!-- color legend for all locations -->
 
@@ -24,8 +25,8 @@
       </div>
     </div>
 
-    <div class="map-text relative z-999 ml5-l">
-      <p class="c3">
+    <div ref="mapText" class="map-text relative z-999 ml5-l measure">
+      <p class="c3" data-lat="35.08652" data-lng="-89.99542">
         <span class="c1"
           >But soon after her grandmother passed, Ms. Doris dug up the booklet
           again, suspecting a connection. It turned out the government was
@@ -57,6 +58,7 @@
       </p>
 
       <p class="c3">
+        >
         <span class="c2 c1"
           >On the afternoon of the meeting, families packed the
           <span style="background-color: #984ea3; color: white"
@@ -91,6 +93,7 @@
 import { centerOfMass, point, featureCollection, feature } from '@turf/turf'
 import * as mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
+import scrollama from 'scrollama'
 
 export default {
   name: 'MemphisContextHeroMap',
@@ -103,6 +106,7 @@ export default {
   data: function () {
     return {
       map: null,
+      focusedEl: null,
       containerScrollY: 0,
       focused: false,
       initialZoom: 4,
@@ -151,6 +155,15 @@ export default {
   mounted: function () {
     this.setUpMapboxMap()
 
+    const scroller = scrollama()
+    scroller
+      .setup({
+        step: '.map-text p',
+        // debug: true,
+        offset: 0.75,
+      })
+      .onStepEnter(this.onStepEnter)
+
     // set up scroll listener
     window.addEventListener('scroll', this.onScroll)
   },
@@ -162,6 +175,23 @@ export default {
     },
   },
   methods: {
+    onStepEnter(step) {
+      console.log('step', step)
+      const el = step.element
+      const lat = el.getAttribute('data-lat')
+      const lng = el.getAttribute('data-lng')
+      if (!lng || !lat) return
+      const location = this.locations.find((l) => l.lat == lat && l.lng == lng)
+      this.focusedEl = el
+      this.focused = true
+
+      const zoomDuration = step.index === 0 ? 6000 : 3000
+      this.map.flyTo({
+        center: [lng, lat],
+        zoom: this.focusedZoom,
+        duration: zoomDuration,
+      })
+    },
     flyToLocation(location) {
       this.map.flyTo({
         center: [location.lng, location.lat],
@@ -180,39 +210,43 @@ export default {
     },
     onMapFocused: function () {
       const zoomDuration = 8000
-      this.map.easeTo({
-        zoom: this.focusedZoom,
-        pitch: 55,
-        bearing: -32,
-        duration: zoomDuration,
-      })
+      // this.map.easeTo({
+      //   zoom: this.focusedZoom,
+      //   pitch: 55,
+      //   bearing: -32,
+      //   duration: zoomDuration,
+      // })
 
-      // after 8 seconds do this.map.setStyle to this style: 'mapbox://styles/mapbox/satellite-v9',
-      setTimeout(
-        function () {
-          this.map.setStyle('mapbox://styles/mapbox/satellite-v9')
-        }.bind(this),
-        zoomDuration + 25
-      )
+      // // after 8 seconds do this.map.setStyle to this style: 'mapbox://styles/mapbox/satellite-v9',
+      // setTimeout(
+      //   function () {
+      //     this.map.setStyle('mapbox://styles/mapbox/satellite-v9')
+      //   }.bind(this),
+      //   zoomDuration + 25
+      // )
     },
     onMapLoaded: function () {
-      // Create a default Marker and add it to the map.
-      // const marker1 = new mapboxgl.Marker()
-      // .setLngLat([12.554729, 55.70651])
-      // .addTo(map);
       // create markers for all locations in this.locations
       this.locations.forEach(
         function (location) {
+          const popup = new mapboxgl.Popup({ offset: 25 }).setText(
+            location.name
+          )
+          const el = document.createElement('div')
+
           const marker = new mapboxgl.Marker({
             color: location.color,
           })
             .setLngLat([location.lng, location.lat])
+            .setPopup(popup)
             .addTo(this.map)
         }.bind(this)
       )
     },
     onScroll: function (e) {
       this.containerScrollY = this.calcContainerScrollY(e)
+      if (!this.$refs.root) return
+
       const containerHeight = this.$refs.root.offsetHeight
       // if containerScrollY is negative, not in focus for the height of the element
       if (this.containerScrollY < 0) {
@@ -222,9 +256,14 @@ export default {
       } else {
         this.focused = true
       }
+
+      // detect which element is in focus
+      this.focusedEl = this.detectFocusedEl()
     },
+    detectFocusedEl() {},
     calcContainerScrollY: function (e) {
       const containerEl = this.$refs.root
+      if (!containerEl) return false
       /* figure out how many pixels have been scrolled in container */
       let containerScrollY = containerEl.getBoundingClientRect().top
       // invert the number from negative to positive
@@ -255,7 +294,6 @@ export default {
 <style scoped>
 #map {
   position: sticky;
-  top: 2em;
 }
 
 .vh-80 {
@@ -268,16 +306,19 @@ export default {
 }
 
 p {
-  margin-bottom: 33vh;
-
+  margin-bottom: 40vh;
   padding: 2em 1.2em;
   margin-left: 2vw;
+  margin-right: 2vw;
   line-height: 1.3em;
   background-color: white;
-  max-width: 34em;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 3.3rem rgba(0, 0, 0, 0.15);
+  border: 1px solid white;
 }
 
 .sticky {
   position: sticky;
 }
 </style>
+"

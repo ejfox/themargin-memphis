@@ -119,7 +119,14 @@ Frustrated some days and furious others, in 2000, Ms. Doris invited a team of in
 
 One finding was particularly unnerving. At three of the four sites they tested, including Hamilton High, levels of chromium, a lustrous metal that [has been linked with](https://www.google.com/url?q=https://www.atsdr.cdc.gov/csem/chromium/physiologic_effects_of_chromium_exposure.html&sa=D&source=editors&ust=1662070397045927&usg=AOvVaw2ZLkfGiqlPA1AYhvFYIT6H) respiratory, renal, gastrointestinal, and developmental issues, as well as cancer, were detected at [126 parts per million](https://www.google.com/url?q=https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3807517/&sa=D&source=editors&ust=1662070397046208&usg=AOvVaw1CdA1SLngK2qsNCdpvTngJ) — triple the EPA’s limit at the time. It seemed to be more than a coincidence. In the short term, according to [EPA documents](https://www.google.com/url?q=https://archive.epa.gov/water/archive/web/pdf/archived-consumer-fact-sheet-on-chromium.pdf&sa=D&source=editors&ust=1662070397046545&usg=AOvVaw1jkwlSd2gtniuJqAwiiShN), exposure to chromium can cause skin irritation and ulcers — like what Ms. Doris’ son Rudolph suffered after playing in the dirt and the Scottish Terrier experienced after brushing up against dew-laden grass at dawn. In the long term, repeated exposure can cause kidney issues, like what Ms. Doris suffers from today.
 
-Although it was only one piece of the puzzle, it was something. “You had some really extreme exposures that were traceable to the Memphis Defense Depot,” Morris, now a professor of chemistry and the director of the School of Mathematical and Natural Sciences at Arizona State University, recalled of the team’s findings. “And that was in 2000. You do the mathematics and go back in time and that ramps up exponentially. I mean, in 1950, you’re getting slammed,” he said. “And now you’ve got generational effects.”  
+Although it was only one piece of the puzzle, it was something. “You had some really extreme exposures that were traceable to the Memphis Defense Depot,” Morris, now a professor of chemistry and the director of the School of Mathematical and Natural Sciences at Arizona State University, recalled of the team’s findings. “And that was in 2000. You do the mathematics and go back in time and that ramps up exponentially. I mean, in 1950, you’re getting slammed,” he said. “And now you’ve got generational effects.”
+
+---
+
+## Superfund Locations Across The U.S.
+### There are thousands of military superfund sites across the US, TK have been cleaned up and TK are still in the process of being cleaned up.
+::superfund-site-explorer
+::
   
 ---
 
