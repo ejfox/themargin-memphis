@@ -1,10 +1,52 @@
 <template>
-  <section class="">
+  <section class="relative">
     <!-- <h1 v-if="pending" class="bg-black white tc pa5">Loading superfundData</h1> -->
+    <div class="map-controls absolute top-2 left-2 z-2">
+      <button class="pa1 ma2" @click="resetMapView">Full U.S.</button>
+      <button
+        class="pa1 ma2"
+        @click="
+          flyToLocation({
+            lat: 34.30267994231717,
+            lng: -92.0855819157041,
+            zoom: 9,
+          })
+        "
+      >
+        Pine Bluff Chemical Agent Disposal Facility
+      </button>
+      <button
+        class="pa1 ma2"
+        @click="
+          flyToLocation({
+            lat: 18.128444691377894,
+            lng: -65.44000720750446,
+            zoom: 11,
+          })
+        "
+      >
+        The Vieques, Puerto Rico, Naval Training Range
+      </button>
+      <button
+        class="pa1 ma2"
+        @click="
+          flyToLocation({
+            // lat: 18.128444691377894,
+            // lng: -65.44000720750446,
+            // 29°23′00″N 098°34′51″W
+            lat: 29.383333,
+            lng: -98.580833,
+            zoom: 13,
+          })
+        "
+      >
+        Kelly Air Force Base
+      </button>
+    </div>
     <div
       id="superfund-map"
       ref="superfundMapRoot"
-      class="ba b--white w-100 vh-100 z-1"
+      class="ba b--white w-100 vh-50 z-1"
     ></div>
   </section>
 </template>
@@ -12,10 +54,28 @@
 <script setup>
 import * as mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
+import { bbox } from '@turf/turf'
 import * as superfundData from '~/assets/superfund_sites.json'
 
 const map = ref(null)
 const initialZoom = 4
+
+const initialCenter = [-90.0489801, 35.1495343]
+const boundingBox = [-124.848974, 24.396308, -66.885444, 49.384358]
+
+function flyToLocation(location) {
+  map.value.flyTo({
+    center: [location.lng, location.lat],
+    zoom: location.zoom,
+    duration: location.duration ? location.duration : 3200,
+  })
+}
+
+function resetMapView() {
+  map.value.fitBounds(boundingBox, {
+    padding: 100,
+  })
+}
 
 onMounted(() => {
   console.log('superfundData', superfundData)
@@ -24,10 +84,15 @@ onMounted(() => {
     container: 'superfund-map',
     // container: this.$refs.superfundMapRoot
     style: 'mapbox://styles/mapbox/light-v9',
-    center: [-90.0362, 35.12587],
+    // center: initialCenter,
     zoom: initialZoom,
+    projection: 'globe',
     accessToken:
       'pk.eyJ1IjoiZWpmb3giLCJhIjoiY2lyZjd0bXltMDA4b2dma3JzNnA0ajh1bSJ9.iCmlE7gmJubz2RtL4RFzIw',
+  })
+
+  map.value.fitBounds(boundingBox, {
+    padding: 100,
   })
 
   map.value.addControl(
@@ -43,6 +108,12 @@ onMounted(() => {
     })
   )
   map.value.on('load', () => {
+    // get bounding box of superfundData and use it to fitBounds
+    // const boundingBox = bbox(superfundData)
+    // bounding box of the continental US
+    map.value.fitBounds(boundingBox, {
+      padding: 100,
+    })
     if (!map.value.getLayer('superfund-sites')) {
       map.value.addLayer({
         id: 'superfund-sites',

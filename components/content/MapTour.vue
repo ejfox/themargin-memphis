@@ -176,7 +176,7 @@ export default {
   },
   methods: {
     onStepEnter(step) {
-      console.log('step', step)
+      // console.log('step', step)
       const el = step.element
       const lat = el.getAttribute('data-lat')
       const lng = el.getAttribute('data-lng')

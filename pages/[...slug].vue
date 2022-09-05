@@ -6,3 +6,8 @@
     </article>
   </main>
 </template>
+<style>
+img {
+  display: block;
+}
+</style>

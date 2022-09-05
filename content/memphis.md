@@ -65,6 +65,8 @@ The houses on Hays Road, the street that serves as Dunn Field’s eastern bounda
 ::superfund-site-explorer
 :: -->
 
+
+
 ---
 
 ::numeral{text="III."}
@@ -75,6 +77,8 @@ First thing on a dry, hot morning in May, I drove over to Hamilton High School t
 Frank, 45, is equal parts jolly and incensed. He’s a compact, charismatic opera singer and a formally trained journalist who now works as a neighborhood connector for a Memphis-based non-profit, the Center for Transforming Communities.
 
 As we crossed a bridge over Cane Creek, connecting the high school parking lot to its sports field, the blackberry bushes and beech trees that sprung up from the concrete-lined creek below offered a glimpse of what the land may have looked like before the Defense Depot spliced it up.
+
+![A Google streetview photograph of the front of Hamilton High School](images/hamilton-hs-streetview.png)
 
 Despite the lushness, many who live and go to school here didn’t necessarily choose to do so, Frank impresses upon me. Like many families that now reside in the area surrounding the Depot, Frank is here because his family was displaced by multiple waves of racist government policy. Otherwise, Frank and his family might have been living farther from the Depot, closer to downtown, where his grandfather, Frank Johnson Sr., once built the family a house on Porter Street.
 
@@ -101,6 +105,11 @@ But after the 1995 meeting at Norris Elementary, where DDMT-CCC was born, Ms. Do
 
 Her work took her far and wide, sometimes to Arkansas, to visit her friend Evelyn Yates, who was fighting the construction of the [Pine Bluff Chemical Agent Disposal Facility](https://www.google.com/url?q=https://www.army.mil/article/117703/pine_bluff_chemical_agent_disposal_facility_prepared_for_final_closure&sa=D&source=editors&ust=1662070397039803&usg=AOvVaw1W-AbUcY4FnKjxLW5V5Hri). Other times, it took her to Puerto Rico to meet with residents living around the U.S. Navy’s former [Naval Training Range](https://www.google.com/url?q=https://www.theatlantic.com/politics/archive/2016/09/vieques-invisible-health-crisis/498428/&sa=D&source=editors&ust=1662070397040208&usg=AOvVaw3GkyWPVMcCnzfOQJ5Gyt62) on the island of Vieques, where from 1941 to 2001, the Navy stored ammunition and conducted live-training bombing and gunfire exercises. “Everywhere there was a military site, people were leading that fight. They knew things was wrong,” Ms. Doris explained. Many were fast friends, like Chavez Lopez, who lived near the former [Kelly Air Force Base](https://www.google.com/url?q=https://www.afcec.af.mil/Home/BRAC/Kelly.aspx&sa=D&source=editors&ust=1662070397040525&usg=AOvVaw30UzT5SQJhOjIl7uod_yYC) in San Antonio, Texas, and LeVonne Stone, who lived near the former [Fort Ord Army post](https://www.google.com/url?q=https://fortordcleanup.com/about/fort-ord-and-brac-history/&sa=D&source=editors&ust=1662070397040846&usg=AOvVaw3kNYGanSoEgKBnvWtIGcvD) in Marina, California.
 
+## Superfund Locations Across The U.S.
+### There are thousands of military superfund sites across the US, TK have been cleaned up and TK are still in the process of being cleaned up.
+::superfund-site-explorer
+::
+
 As Ms. Doris continued to meet others with parallel stories – so similar, yet hundreds of miles away from Memphis – she was struck by memories and retrospective realizations of exposure. She thought about the pipes and how that gooseneck bend below the kitchen sink never lasted more than a year before needing to be replaced. “That metal, it’d crumble in your hand. So, whatever was in the water, we had all got it in us,” Ms. Doris remembered. She thought back to how when she took her old Scottish Terrier, Princess, out into the grass for her morning pee, they both developed blisters on their legs where they brushed up against the dew. She thought, too, about the time when her son Rudolph’s neck swelled up so badly after playing in a pile of soil dug up from a Cane Creek culvert that she had to rush him to the hospital.  
 
 By the end of the 1990s, some things around the Depot began to change. In 1995, along with dozens of other military installations around the United States, the Department of Defense approved the closure of Memphis’ Defense Depot. City and county officials teamed up and launched a group that would coordinate the sprawling facility’s reuse, called the Depot Redevelopment Corporation, which in 1997 published a lengthy [plan](https://www.google.com/url?q=https://ww3.sam.usace.army.mil/DDMT/docs/AR1452-1.pdf&sa=D&source=editors&ust=1662070397041450&usg=AOvVaw3m8uJVepqisXdtJQYqX9Tu) calling for a public recreation center, eight units of housing for the homeless, and some 60,000 square feet for a police compound.
@@ -120,15 +129,6 @@ Frustrated some days and furious others, in 2000, Ms. Doris invited a team of in
 One finding was particularly unnerving. At three of the four sites they tested, including Hamilton High, levels of chromium, a lustrous metal that [has been linked with](https://www.google.com/url?q=https://www.atsdr.cdc.gov/csem/chromium/physiologic_effects_of_chromium_exposure.html&sa=D&source=editors&ust=1662070397045927&usg=AOvVaw2ZLkfGiqlPA1AYhvFYIT6H) respiratory, renal, gastrointestinal, and developmental issues, as well as cancer, were detected at [126 parts per million](https://www.google.com/url?q=https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3807517/&sa=D&source=editors&ust=1662070397046208&usg=AOvVaw1CdA1SLngK2qsNCdpvTngJ) — triple the EPA’s limit at the time. It seemed to be more than a coincidence. In the short term, according to [EPA documents](https://www.google.com/url?q=https://archive.epa.gov/water/archive/web/pdf/archived-consumer-fact-sheet-on-chromium.pdf&sa=D&source=editors&ust=1662070397046545&usg=AOvVaw1jkwlSd2gtniuJqAwiiShN), exposure to chromium can cause skin irritation and ulcers — like what Ms. Doris’ son Rudolph suffered after playing in the dirt and the Scottish Terrier experienced after brushing up against dew-laden grass at dawn. In the long term, repeated exposure can cause kidney issues, like what Ms. Doris suffers from today.
 
 Although it was only one piece of the puzzle, it was something. “You had some really extreme exposures that were traceable to the Memphis Defense Depot,” Morris, now a professor of chemistry and the director of the School of Mathematical and Natural Sciences at Arizona State University, recalled of the team’s findings. “And that was in 2000. You do the mathematics and go back in time and that ramps up exponentially. I mean, in 1950, you’re getting slammed,” he said. “And now you’ve got generational effects.”
-
----
-
-## Superfund Locations Across The U.S.
-### There are thousands of military superfund sites across the US, TK have been cleaned up and TK are still in the process of being cleaned up.
-::superfund-site-explorer
-::
-  
----
 
 ::numeral{text="V."}
 ::
