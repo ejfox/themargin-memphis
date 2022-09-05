@@ -2,7 +2,7 @@
   <img
     :src="`${url}`"
     :style="{ width, height: 'auto' }"
-    class="fr w-50 ma1 mh4-l pa1 pa3-l pr4-ns pr6-l"
+    class="fr-l w-100 w-50-l ma1 mh4-l pa1 pa3-l pr4-ns pr6-l"
   />
 </template>
 <script setup>

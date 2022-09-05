@@ -47,7 +47,7 @@
         >
       </p>
 
-      <p class="c3" data-lat="35.100182" data-lng="-90.017372">
+      <p class="c3">
         <span class="c2 c1"
           >So she drew up some flyers with a skull and crossbones pasted in the
           center, calling for a meeting at her children&rsquo;s school, Norris
@@ -57,7 +57,7 @@
         >
       </p>
 
-      <p class="c3">
+      <p class="c3" data-lat="35.100182" data-lng="-90.017372">
         >
         <span class="c2 c1"
           >On the afternoon of the meeting, families packed the
@@ -90,10 +90,99 @@
 <script>
 // import * as d3 from 'd3'
 // import turf
-import { centerOfMass, point, featureCollection, feature } from '@turf/turf'
+import {
+  centerOfMass,
+  point,
+  featureCollection,
+  feature,
+  bbox,
+} from '@turf/turf'
 import * as mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import scrollama from 'scrollama'
+
+const memphisDepotGeojson = {
+  type: 'FeatureCollection',
+  features: [
+    {
+      type: 'Feature',
+      properties: {
+        shape: 'Polygon',
+        name: 'Unnamed Layer',
+        category: 'default',
+      },
+      geometry: {
+        type: 'Polygon',
+        coordinates: [
+          [
+            [-90.009572, 35.091997],
+            [-90.009915, 35.082112],
+            [-89.988565, 35.081532],
+            [-89.988543, 35.085027],
+            [-89.987835, 35.084992],
+            [-89.987792, 35.091453],
+            [-90.009572, 35.091997],
+          ],
+        ],
+      },
+      id: '4a8795c6-4dd2-480e-a02e-a5bd2316aa9c',
+    },
+  ],
+}
+
+const focusAreaGeojson = {
+  type: 'FeatureCollection',
+  features: [
+    {
+      type: 'Feature',
+      properties: {
+        shape: 'Rectangle',
+        name: 'Focus Area',
+        category: 'default',
+      },
+      geometry: {
+        type: 'Polygon',
+        coordinates: [
+          [
+            [-90.030295, 35.099617],
+            [-90.030295, 35.077423],
+            [-89.980798, 35.077423],
+            [-89.980798, 35.099617],
+            [-90.030295, 35.099617],
+          ],
+        ],
+      },
+      id: '9192e488-943b-490c-a04e-1656aa747e7e',
+    },
+  ],
+}
+
+const wholeMemphisGeojson = {
+  type: 'FeatureCollection',
+  features: [
+    {
+      type: 'Feature',
+      properties: {
+        shape: 'Rectangle',
+        name: 'Whole Memphis',
+        category: 'default',
+      },
+      geometry: {
+        type: 'Polygon',
+        coordinates: [
+          [
+            [-90.074572, 35.062039],
+            [-89.853525, 35.062039],
+            [-89.853525, 35.208319],
+            [-90.074572, 35.208319],
+            [-90.074572, 35.062039],
+          ],
+        ],
+      },
+      id: 'f20ddac7-c258-4cb9-9a28-ac398b911528',
+    },
+  ],
+}
 
 export default {
   name: 'MemphisContextHeroMap',
@@ -109,15 +198,15 @@ export default {
       focusedEl: null,
       containerScrollY: 0,
       focused: false,
-      initialZoom: 4,
+      initialZoom: 5,
       focusedZoom: 14,
       locations: [
-        {
-          name: 'Memphis Depot',
-          lat: 35.08652,
-          lng: -89.99542,
-          color: '#e41a1c',
-        },
+        // {
+        //   name: 'Memphis Depot',
+        //   lat: 35.08652,
+        //   lng: -89.99542,
+        //   color: '#e41a1c',
+        // },
         {
           name: 'Frank Sr. former home',
           lat: 35.12587,
@@ -142,12 +231,12 @@ export default {
           lng: -90.01443,
           color: '#ff7f00',
         },
-        {
-          name: 'Dunn Field',
-          lat: 35.09519,
-          lng: -90.00734,
-          color: '#00ffff',
-        },
+        // {
+        //   name: 'Dunn Field',
+        //   lat: 35.09519,
+        //   lng: -90.00734,
+        //   color: '#00ffff',
+        // },
       ],
     }
   },
@@ -160,7 +249,8 @@ export default {
       .setup({
         step: '.map-text p',
         // debug: true,
-        offset: 0.75,
+        // offset: 0.75,
+        offset: 0.6,
       })
       .onStepEnter(this.onStepEnter)
 
@@ -181,21 +271,44 @@ export default {
       const lat = el.getAttribute('data-lat')
       const lng = el.getAttribute('data-lng')
       if (!lng || !lat) return
-      const location = this.locations.find((l) => l.lat == lat && l.lng == lng)
+      // const location = this.locations.find((l) => l.lat == lat && l.lng == lng)
       this.focusedEl = el
       this.focused = true
 
       const zoomDuration = step.index === 0 ? 6000 : 3000
-      this.map.flyTo({
-        center: [lng, lat],
-        zoom: this.focusedZoom,
-        duration: zoomDuration,
-      })
+
+      if (step.index === 0) {
+        this.map.fitBounds(bbox(focusAreaGeojson), {
+          duration: zoomDuration,
+          padding: {
+            // left: 300,
+            // use window width to make padding left a percentage
+            left: window.innerWidth ? window.innerWidth * 0.35 : 300,
+            right: 20,
+            top: 20,
+            bottom: 20,
+          },
+        })
+        // wait the zoom duration, and then easeTo with a pitch
+        setTimeout(() => {
+          this.map.easeTo({
+            pitch: 45,
+            duration: zoomDuration,
+          })
+        }, zoomDuration)
+      } else {
+        this.map.flyTo({
+          center: [lng, lat],
+          zoom: this.focusedZoom,
+          duration: zoomDuration,
+        })
+      }
     },
     flyToLocation(location) {
       this.map.flyTo({
         center: [location.lng, location.lat],
         zoom: this.focusedZoom * 1.3,
+        duration: zoomDuration,
       })
     },
     calcCenterOfMass: function () {
@@ -210,6 +323,18 @@ export default {
     },
     onMapFocused: function () {
       const zoomDuration = 8000
+
+      // fit to bounds of whole Memphis
+      this.map.fitBounds(bbox(wholeMemphisGeojson), {
+        duration: zoomDuration,
+        padding: {
+          left: 20,
+          right: 20,
+          top: 20,
+          bottom: 20,
+        },
+      })
+
       // this.map.easeTo({
       //   zoom: this.focusedZoom,
       //   pitch: 55,
@@ -242,6 +367,68 @@ export default {
             .addTo(this.map)
         }.bind(this)
       )
+
+      // add labels for all locations in this.locations as geojson
+      // first create an array of points for each location
+      const points = this.locations.map(function (location) {
+        return point([location.lng, location.lat], {
+          name: location.name,
+          color: location.color,
+        })
+      })
+      // then create a feature collection from the points
+      const pointFeatureCollection = featureCollection(points)
+      // then add the feature collection to the map
+      this.map.addSource('points', {
+        type: 'geojson',
+        data: pointFeatureCollection,
+      })
+      // then add the labels to the map
+      this.map.addLayer({
+        id: 'labels',
+        type: 'symbol',
+        source: 'points',
+        layout: {
+          'text-field': ['get', 'name'],
+          'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
+          'text-offset': [0, 0.6],
+          // 'text-transform': 'uppercase',
+          'text-anchor': 'top',
+        },
+        paint: {
+          'text-color': ['get', 'color'],
+          'text-halo-color': '#fff',
+          'text-halo-width': 1,
+        },
+      })
+
+      // add memphis depot as geojson, with orange fill
+      this.map.addSource('memphis-depot', {
+        type: 'geojson',
+        data: memphisDepotGeojson,
+      })
+      // this.map.addLayer({
+      //   id: 'memphis-depot-label',
+      //   type: 'symbol',
+      //   source: 'memphis-depot',
+      //   layout: {
+      //     'text-field': 'Memphis Depot',
+      //     'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
+      //     'text-offset': [0, 0.6],
+      //     'text-anchor': 'top',
+      //     'text-allow-overlap': false,
+      //   },
+      // })
+
+      this.map.addLayer({
+        id: 'memphis-depot-fill',
+        type: 'fill',
+        source: 'memphis-depot',
+        paint: {
+          'fill-color': '#ff7f00',
+          'fill-opacity': 0.5,
+        },
+      })
     },
     onScroll: function (e) {
       this.containerScrollY = this.calcContainerScrollY(e)
@@ -273,14 +460,19 @@ export default {
     setUpMapboxMap: function () {
       this.map = new mapboxgl.Map({
         container: this.$refs.mapRoot,
-        style: 'mapbox://styles/mapbox/streets-v11',
+        // style: 'mapbox://styles/mapbox/streets-v11',
+        // satellite style
+        // style: 'mapbox://styles/mapbox/satellite-v9',
+        style: 'mapbox://styles/ejfox/cl7p0rxav000o15p0dnsl8jen',
         center: [-89.99542, 35.08652],
         // make center centerOfMass of all locations
         // center: this.calcCenterOfMass(),
         zoom: this.initialZoom,
         accessToken:
           'pk.eyJ1IjoiZWpmb3giLCJhIjoiY2lyZjd0bXltMDA4b2dma3JzNnA0ajh1bSJ9.iCmlE7gmJubz2RtL4RFzIw',
-        projection: 'globe',
+        // 'pk.eyJ1IjoiZWpmb3giLCJhIjoiY2lyZjd0bXltMDA4b2dma3JzNnA0ajh1bSJ9.iCmlE7gmJubz2RtL4RFzIw',
+
+        // projection: 'globe',
       })
 
       this.map.on('load', this.onMapLoaded)

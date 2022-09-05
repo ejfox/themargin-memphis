@@ -78,13 +78,13 @@ function resetMapView() {
 }
 
 onMounted(() => {
-  console.log('superfundData', superfundData)
-
   map.value = new mapboxgl.Map({
     container: 'superfund-map',
     // container: this.$refs.superfundMapRoot
     style: 'mapbox://styles/mapbox/light-v9',
     // center: initialCenter,
+    // make the center of the US the initial center
+    center: [-90.0489801, 35.1495343],
     zoom: initialZoom,
     projection: 'globe',
     accessToken:
@@ -112,7 +112,7 @@ onMounted(() => {
     // const boundingBox = bbox(superfundData)
     // bounding box of the continental US
     map.value.fitBounds(boundingBox, {
-      padding: 100,
+      padding: 72,
     })
     if (!map.value.getLayer('superfund-sites')) {
       map.value.addLayer({
@@ -123,7 +123,19 @@ onMounted(() => {
           data: superfundData,
         },
         paint: {
-          'circle-radius': ['/', ['get', 'Site Score'], 6],
+          // 'circle-radius': ['/', ['get', 'Site Score'], 19],
+          // interpolate circle-radius so it gets bigger on zoom
+          'circle-radius': [
+            'interpolate',
+            ['linear'],
+            ['zoom'],
+            0,
+            ['/', ['get', 'Site Score'], 10],
+            8,
+            ['/', ['get', 'Site Score'], 11],
+            12,
+            ['/', ['get', 'Site Score'], 1.25],
+          ],
           'circle-color': 'rgba(255,0,0,0.25)',
         },
       })
@@ -140,11 +152,34 @@ onMounted(() => {
         },
         layout: {
           'text-field': ['get', 'Site Name'],
-          'text-variable-anchor': ['top', 'bottom', 'left', 'right'],
-          'text-radial-offset': 0.8,
+          'text-variable-anchor': ['top'],
+          // 'text-radial-offset': 0.9,
+          // use variable offset based on zoom
+          'text-offset': [
+            'interpolate',
+            ['linear'],
+            ['zoom'],
+            0,
+            ['literal', [0, 0.7]],
+            7,
+            ['literal', [0, 0.75]],
+            14,
+            ['literal', [0, 3]],
+          ],
           'text-justify': 'auto',
           'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
-          'text-size': 9,
+          // re-write to properly use mapbox styles for zoom interpolation
+          'text-size': [
+            'interpolate',
+            ['linear'],
+            ['zoom'],
+            0,
+            5,
+            8,
+            9,
+            10,
+            14,
+          ],
         },
         paint: {
           //'text-color': 'rgba(255,0,0,0.5)',
@@ -153,10 +188,10 @@ onMounted(() => {
             'interpolate',
             ['linear'],
             ['zoom'],
-            4,
+            5,
             'rgba(255,0,0,0)',
-            10,
-            'rgba(255,0,0,0.8)',
+            9,
+            'rgba(255,0,0,0.5)',
           ],
         },
       })
