@@ -1,6 +1,6 @@
 <template>
-  <main class="sans-serif">
-    <h1 class="ml3 mh6-l mv5 f-subheadline f1">The Margin</h1>
+  <main class="sans-serif ma0 pa0">
+    <h1 class="mt0 pt5 pt6-l ml3 mh6-l mb5 f-subheadline f1">The Margin</h1>
     <article class="serif cf">
       <ContentDoc />
     </article>
@@ -9,5 +9,7 @@
 <style>
 img {
   display: block;
+  width: 100%;
+  height: auto;
 }
 </style>

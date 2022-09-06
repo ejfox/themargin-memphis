@@ -1,6 +1,6 @@
 "
 <template>
-  <section class="hero-map-container ba b--white" ref="root">
+  <section class="hero-map-container ba b--white bw2 bw3-l" ref="root">
     <!-- <h2 class="bg-red yellow ph2 sticky top-0 h1 f6 z-3">{{ scrollY }}</h2>
     <h2 class="bg-blue white ph2 sticky top-2 h1 f6 z-3">
       {{ containerScrollY }}
@@ -464,12 +464,13 @@ export default {
         // satellite style
         // style: 'mapbox://styles/mapbox/satellite-v9',
         style: 'mapbox://styles/ejfox/cl7p0rxav000o15p0dnsl8jen',
+        accessToken:
+          'pk.eyJ1IjoiZWpmb3giLCJhIjoiY2lyZjd0bXltMDA4b2dma3JzNnA0ajh1bSJ9.iCmlE7gmJubz2RtL4RFzIw',
         center: [-89.99542, 35.08652],
         // make center centerOfMass of all locations
         // center: this.calcCenterOfMass(),
         zoom: this.initialZoom,
-        accessToken:
-          'pk.eyJ1IjoiZWpmb3giLCJhIjoiY2lyZjd0bXltMDA4b2dma3JzNnA0ajh1bSJ9.iCmlE7gmJubz2RtL4RFzIw',
+
         // 'pk.eyJ1IjoiZWpmb3giLCJhIjoiY2lyZjd0bXltMDA4b2dma3JzNnA0ajh1bSJ9.iCmlE7gmJubz2RtL4RFzIw',
 
         // projection: 'globe',

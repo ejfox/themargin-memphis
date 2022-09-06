@@ -1,7 +1,7 @@
 # “We glow in the dark”
 ## A Memphis community demands reparations for unknowingly hosting the toxic waste of war
 
-::inset-image{url="/images/memphis-inset-locator.r2.png" width="350px"}
+::inset-image{url="/images/memphis-inset-locator.r2.png" width="32vw"}
 ::
   
 It was October 1995, just as the cool evenings set in, in Memphis, Tennessee, when things began making sense to Doris Bradshaw[\[a\]](#cmnt1).
@@ -18,15 +18,14 @@ On the afternoon of the meeting, families packed the Norris Elementary school ca
 
 There was another thing everyone in the room had in common that day: they lived within walking distance of the 600-acre Defense Depot and a 60-acre parcel just north known as Dunn Field, which some families looked out onto from their front stoops. Despite its being fenced off, the field appeared to be a perfect place to picnic, under the shade of oak trees that speckled rolling hills and grass-filled flatlands. But oddities sometimes showed up at the field, like a concrete dome or a stack of long metal rods. And then there was the unseen. Although Dunn Field’s neighbors didn’t know it at the time, behind barbed wire and beneath the soil, mustard bombs had been buried decades ago, laid to rest near dozens of other categories of waste[\[b\]](#cmnt2), including lewisite (a chemical weapon); plane crash residue; and 55-gallon drums of oil, grease, and paint thinner.
 
-::map-tour
-::
+
 
 Residents couldn’t recall signs of warning, but the papers occasionally reported on the Defense Depot. In 1959, a local newspaper, the Commercial Appeal,[\[c\]](#cmnt3) described one incident:
 
 “The Army fell on troubled times yesterday, trying to bury 20 tons of chemicals,” the story read, describing a 125-foot ditch disposal site at the Depot. “Rain set it ‘afire.’ Bulldozers tried to cover it with dirt. It just added to a churning mess which sent up a big orange cloud. Then an ill wind sent an irritating odor over much of Southeast Memphis.”
 
-::inset-image{url="/images/memphis_graphics_superfundsites.r1.png" width="350px"}
-::
+<!-- ::inset-image{url="/images/memphis_graphics_superfundsites.r1.png" width="350px"}
+:: -->
 
 Government officials, meanwhile, were well aware of the danger. In October 1992, after 10 years of U.S. Army–commissioned assessments[\[d\]](#cmnt4), the Environmental Protection Agency (EPA) added the Defense Depot to its inventory of most contaminated places in the United States, noting [in its decision](https://www.google.com/url?q=https://semspub.epa.gov/work/04/10115971.pdf&sa=D&source=editors&ust=1662070397027557&usg=AOvVaw3D3DXufCvBbpZc2JoGTuaw) the need to remove 7,200 square feet of soil contaminated with lead and remediate chlorinated volatile organic compounds (VOCs) from groundwater because of their “current and potential risk to human health.” Since then, the Depot has remained on the National Priorities List, also known as the Superfund program. The program lists thousands of toxic waste sites across the country in need of cleanup. Superfund sites [disproportionately impact](https://www.google.com/url?q=https://www.epa.gov/sites/default/files/2021-06/documents/superfund_remediation_and_redevelopment_for_environmental_justice_communities_may_2021_report.pdf&sa=D&source=editors&ust=1662070397028092&usg=AOvVaw3Lni0kU8OVHWX_c5FoXwTq) communities of color. Doris’ census tract, for instance, is [93% Black](https://www.google.com/url?q=https://ejscreen.epa.gov/mapper/demogreportpdf.aspx?report%3Dacs2019&sa=D&source=editors&ust=1662070397028411&usg=AOvVaw34mfL7xnjd09cS0ELfzsq_) and in the [98th percentile](https://www.google.com/url?q=https://ejscreen.epa.gov/mapper/&sa=D&source=editors&ust=1662070397028733&usg=AOvVaw2vpPr08mFdw0ESTvlWUg9I) in terms of proximity to a Superfund site.
 
@@ -60,6 +59,10 @@ In 1942, patriotism and pride filled newspaper headlines: “Even before the Jap
 
 Then, [in July 1946](https://www.google.com/url?q=https://ww3.sam.usace.army.mil/DDMT/docs/AR428-1.pdf&sa=D&source=editors&ust=1662070397033349&usg=AOvVaw0vlO1a4MDL7hoRli_w6RvX), three freight cars filled with 500-pound German mustard bombs arrived in Memphis, leaking on the way from New Orleans to Pine Bluff, Arkansas and injuring some 100 workers. Once they were removed and neutralized in Memphis, the bombs needed to be buried, and Dunn Field — that rolling, grassy patch also used as a pistol range and to test flamethrowers — appeared to be the perfect location.
 
+::graphic
+<h2 class="i">Graphic illustrating path of leaking freight cars?</h2>
+::
+
 The houses on Hays Road, the street that serves as Dunn Field’s eastern boundary, weren’t there yet.[\[h\]](#cmnt8) But less than a mile away, Ms. Doris’ family was busy building      what would become their three family homes, above creeks and drainage ditches, the arteries of the area.
 <!-- 
 ::superfund-site-explorer
@@ -82,11 +85,17 @@ As we crossed a bridge over Cane Creek, connecting the high school parking lot t
 
 Despite the lushness, many who live and go to school here didn’t necessarily choose to do so, Frank impresses upon me. Like many families that now reside in the area surrounding the Depot, Frank is here because his family was displaced by multiple waves of racist government policy. Otherwise, Frank and his family might have been living farther from the Depot, closer to downtown, where his grandfather, Frank Johnson Sr., once built the family a house on Porter Street.
 
+---
 The original structure where Frank Sr. resided with his wife, Eva, and their seven children is no longer there. It was the family’s place: a set of walls that they crafted and owned. Frank Sr., who escaped slavery and had a fourth-grade education, worked many jobs to maintain it, including as an auto mechanic, boiler helper, and farmworker.[\[j\]](#cmnt10) But in the 1940s, the Home Owners’ Loan Corporation (HOLC), a New Deal–era government-sponsored corporation, [redlined a vast swath of the city](https://www.google.com/url?q=https://dsl.richmond.edu/panorama/redlining/%23loc%3D13/35.132/-90.059%26city%3Dmemphis-tn&sa=D&source=editors&ust=1662070397035926&usg=AOvVaw3l223Dz9peRLodTywfAOQz) backing up to the Mississippi River, including Porter Street, designating it as hazardous. Maps from the era note that the neighborhood could be characterized by “detrimental influences in a pronounced degree” and an “under-desirable population,” which implied the presence of non-whites or migrants — “or an infiltration of it.” As a result of the practice, as occurred all around the U.S., Black residents like Frank Sr. couldn’t obtain loans, and investment was funneled elsewhere.Then, on the heels of the 1949 American Housing Act, which made $1.5 billion in federal loans and grants available for “urban redevelopment,” city politicians surveyed sites that would “make available considerable land and eradicate a good portion of the present slum areas,” including the swells and stream channels where Frank Sr. had built his life. [\[k\]](#cmnt11)City officials would ultimately build a major thoroughfare bisecting the area diagonally, connecting a state highway with Interstate 55 and naming it E.H. Crump Boulevard.
 
 Having been redlined and targeted for slum clearance, Frank Sr.’s house was condemned: the first, but not the last time that racist housing policy would encroach on the family’s health and ability to grow wealth, Frank told me. One day in 1950, Frank Sr. and his family returned home to find all their belongings on the front lawn. The family moved up the road, into a public housing project known as Foote Homes, which would [later be found](https://www.google.com/url?q=https://wreg.com/news/on-your-side/foote-homes-sitting-on-contaminated-soil-demolition-delayed/&sa=D&source=editors&ust=1662070397036802&usg=AOvVaw1bB-RfeRDbcTnhlA6rQvd0) to have been built on contaminated soil.  
   
 It wasn’t the same as having their own space, and the move took a toll. In September 1951, months after being displaced from Porter Street, Eva found Frank Johnson Sr. hunched over the kitchen table without a pulse. “I think that broke him,” Frank told me. “Died suddenly without attendance,” his death certificate read. “No medical history could be obtained.”[\[l\]](#cmnt12)
+
+---
+
+::map-tour
+::
 
 Wanting to give their mother a home of her own again, in 1959, Frank Sr.’s son William Johnson, a 27-year-old veteran and U.S. postal worker, purchased a lot in what would be the first addition to Norris View Subdivision[\[m\]](#cmnt13), where Frank Jr. would grow up in a brick house with black shutters, blocks away from the Defense Depot. A decade prior, in 1948, the Supreme Court had [struck down](https://www.google.com/url?q=https://www.law.cornell.edu/wex/shelley_v_kraemer_(1948)&sa=D&source=editors&ust=1662070397037707&usg=AOvVaw0bIi6wO7GvStY0kRQgPTo2) the use of racial covenants, which had previously prevented residents of color from purchasing homes or land in an area designated “white.” But in practice, subdivisions in much of the expanding city continued to be segregated, designed “for negros” or “for whites.”[\[n\]](#cmnt14)
 
@@ -139,7 +148,11 @@ It had been a while. Ms. Doris was there, and she asked about his family. Frank 
 
 By the time Frank got involved, Ms. Doris was struggling with her own health      issues and was forced to slow down. Despite her illness, Ms. Doris still managed to stay on top of the latest news. In July 2021, she’d heard word that the city’s Economic Development Growth Engine, or the EDGE Board – an authority [funded into existence](https://www.google.com/url?q=https://www.dropbox.com/sh/8611ugorafnziqg/AACmCEn7JnFRcrgyTnJnXQBia/EDGE%2520Administrative%2520Archives/Meeting%2520Minutes/Depot%2520Minutes/2011?dl%3D0%26preview%3D2011-08-17%2BDepot%2BMinutes.pdf%26subfolder_nav_tracking%3D1&sa=D&source=editors&ust=1662070397048036&usg=AOvVaw062qq4eJ4uob0JdPUfqUQh) by the sale of Depot facilities, was planning to vote on dissolving the Depot Redevelopment Corporation (DRC), the group that city and county officials had formed in 1997 and authorized to manage the sale of the Depot. To residents, the DRC’s dissolution would signal that the 10 million dollars it was granted from that sale to oversee redevelopment in the area had been spent by officials without the involvement of DDMT-CCC members – those most affected by and involved with advocating for residents. Ms. Doris, her daughter Marquita, Frank, and others showed up to the board meeting to stop the vote in its tracks.[\[u\]](#cmnt21) 
 
-Depot area residents were not alone in alleging that they’d been left out of the redevelopment process. Joe Kent[\[v\]](#cmnt22) — a workforce and curriculum development specialist, who also identifies as a taxpayer justice advocate and has been working to track what he refers to as “systematic disinvestment” from the Depot area neighborhoods by the EDGE Board — also showed up. He later told me that the depletion of proceeds from the Depot sale to private investors is the greatest taxpayer atrocity he’s ever seen.Documents Kent has obtained from the Tennessee Comptroller of the Treasury, DRC and EDGE Board reveal that over the past decade, since the sale of the Depot facilities, [\[w\]](#cmnt23)which generated [over $24 million](https://www.google.com/url?q=https://www.dropbox.com/sh/8611ugorafnziqg/AACmCEn7JnFRcrgyTnJnXQBia/EDGE%2520Administrative%2520Archives/Meeting%2520Minutes/Depot%2520Minutes/2011?dl%3D0%26preview%3D2011-08-17%2BDepot%2BMinutes.pdf%26subfolder_nav_tracking%3D1&sa=D&source=editors&ust=1662070397049180&usg=AOvVaw1AlGTLbPx27h9RPHvh0Tk2), the EDGE Board has issued generous grants. But the money hasn’t flowed to the Depot area itself. On the contrary, it’s been drained from it. Perhaps most shockingly, the EDGE Board has sent hundreds of thousands of DRC dollars to the chambers of commerce in Arlington, Bartlett, Collierville, Germantown, Lakeland, and Millington — wealthy, majority white, suburban Shelby County towns — for “local economic development initiatives.”[\[x\]](#cmnt24) Frank maintains that no equivalent grants have been issued to Depot-area residents.  
+Depot area residents were not alone in alleging that they’d been left out of the redevelopment process. Joe Kent[\[v\]](#cmnt22) — a workforce and curriculum development specialist, who also identifies as a taxpayer justice advocate and has been working to track what he refers to as “systematic disinvestment” from the Depot area neighborhoods by the EDGE Board — also showed up. He later told me that the depletion of proceeds from the Depot sale to private investors is the greatest taxpayer atrocity he’s ever seen.Documents Kent has obtained from the Tennessee Comptroller of the Treasury, DRC and EDGE Board reveal that over the past decade, since the sale of the Depot facilities, [\[w\]](#cmnt23)which generated [over $24 million](https://www.google.com/url?q=https://www.dropbox.com/sh/8611ugorafnziqg/AACmCEn7JnFRcrgyTnJnXQBia/EDGE%2520Administrative%2520Archives/Meeting%2520Minutes/Depot%2520Minutes/2011?dl%3D0%26preview%3D2011-08-17%2BDepot%2BMinutes.pdf%26subfolder_nav_tracking%3D1&sa=D&source=editors&ust=1662070397049180&usg=AOvVaw1AlGTLbPx27h9RPHvh0Tk2), the EDGE Board has issued generous grants. But the money hasn’t flowed to the Depot area itself. On the contrary, it’s been drained from it. Perhaps most shockingly, the EDGE Board has sent hundreds of thousands of DRC dollars to the chambers of commerce in Arlington, Bartlett, Collierville, Germantown, Lakeland, and Millington — wealthy, majority white, suburban Shelby County towns — for “local economic development initiatives.”[\[x\]](#cmnt24) Frank maintains that no equivalent grants have been issued to Depot-area residents.
+
+::graphic
+<h2 class="i">Visualization of how EDGE has spent taxpayer money?</h2>
+::
   
 Of $[10.9 million](https://www.google.com/url?q=https://comptroller.tn.gov/content/dam/cot/la/advanced-search/2014/other/6342-2014-drcms-rpt-cpa16-2-25-15.pdf&sa=D&source=editors&ust=1662070397049670&usg=AOvVaw3a_iJTQv3U0uPLQKqOCcR0) the DRC had on its books in 2012, as of 2020, [just over $900,000](https://www.google.com/url?q=https://comptroller.tn.gov/content/dam/cot/la/advanced-search/2020/economic-development/6342-2020-qg-drcms-rpt-cpa16-1-08-21.pdf&sa=D&source=editors&ust=1662070397050001&usg=AOvVaw0H1Inakg0Tyfdy9s963K3c) remained. Representatives of the EDGE Board and DRC did not respond to multiple requests for comment.
 
@@ -164,3 +177,7 @@ Outside of Hamilton High, the trickle of Cane Creek behind us, Frank told me he 
 When I visited Ms. Doris again last May, a warm breeze brushed over her hill as she opened an envelope addressed to her from Methodist Hospital. Ms. Doris is waiting for good news any day now: a call confirming that her doctor has found a kidney donor. At 67, she’s the oldest person on her block, and she intends to keep it that way. With her kidney disease under control, after the transplant, she’ll be able to keep fighting for her family and neighbors, as she’s been doing her whole life.
 
 “I’m going to be okay,” she assures me. “I told my grandson, ‘I ain’t going nowhere ’til you graduate.’”
+
+::graphic-large
+<h2>Timeline</h2>
+::

@@ -46,7 +46,7 @@
     <div
       id="superfund-map"
       ref="superfundMapRoot"
-      class="ba b--white w-100 vh-50 z-1"
+      class="ba b--near-white bw2 bw3-l w-100 vh-50 z-1"
     ></div>
   </section>
 </template>
