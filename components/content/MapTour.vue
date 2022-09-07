@@ -86,6 +86,22 @@
         attendance,” his death certificate read. “No medical history could be
         obtained.”
       </p>
+
+      <p data-lat="35.08566" data-lng="-90.01443">
+        Wanting to give their mother a home of her own again, in 1959, Frank
+        Sr.’s son William Johnson, a 27-year-old veteran and U.S. postal worker,
+        purchased a lot in what would be the first addition to Norris View
+        Subdivision, where Frank Jr. would grow up in a brick house with black
+        shutters, blocks away from the Defense Depot.
+      </p>
+
+      <p>
+        A decade prior, in 1948, the Supreme Court had struck down the use of
+        racial covenants, which had previously prevented residents of color from
+        purchasing homes or land in an area designated “white.” But in practice,
+        subdivisions in much of the expanding city continued to be segregated,
+        designed “for negros” or “for whites.”
+      </p>
     </div>
   </section>
 </template>
@@ -187,6 +203,60 @@ const wholeMemphisGeojson = {
   ],
 }
 
+// const finalFocusAreaGeojson = {
+//   type: 'FeatureCollection',
+//   features: [
+//     {
+//       type: 'Feature',
+//       properties: {
+//         shape: 'Rectangle',
+//         name: 'Unnamed Layer',
+//         category: 'default',
+//       },
+//       geometry: {
+//         type: 'Polygon',
+//         coordinates: [
+//           [
+//             [-90.03356, 35.122225],
+//             [-90.03356, 35.076861],
+//             [-89.969959, 35.076861],
+//             [-89.969959, 35.122225],
+//             [-90.03356, 35.122225],
+//           ],
+//         ],
+//       },
+//       id: 'b5106608-7231-4513-ad16-144df4e8bb3a',
+//     },
+//   ],
+// }
+
+const finalFocusAreaGeojson = {
+  type: 'FeatureCollection',
+  features: [
+    {
+      type: 'Feature',
+      properties: {
+        shape: 'Rectangle',
+        name: 'Unnamed Layer',
+        category: 'default',
+      },
+      geometry: {
+        type: 'Polygon',
+        coordinates: [
+          [
+            [-89.987812, 35.082972],
+            [-89.987812, 35.1204],
+            [-90.048328, 35.1204],
+            [-90.048328, 35.082972],
+            [-89.987812, 35.082972],
+          ],
+        ],
+      },
+      id: 'b5106608-7231-4513-ad16-144df4e8bb3a',
+    },
+  ],
+}
+
 export default {
   name: 'MemphisContextHeroMap',
   props: {
@@ -203,6 +273,7 @@ export default {
       focused: false,
       initialZoom: 5,
       focusedZoom: 16,
+      zoomDuration: 3300,
       locations: [
         // {
         //   name: 'Memphis Depot',
@@ -266,7 +337,7 @@ export default {
         step: '.map-text p',
         // debug: true,
         // offset: 0.75,
-        offset: 0.65,
+        offset: 0.92,
       })
       .onStepEnter(this.onStepEnter)
 
@@ -277,6 +348,8 @@ export default {
     focused: function (newVal, oldVal) {
       if (newVal) {
         this.onMapFocused()
+      } else if (oldVal && !newVal) {
+        this.onMapUnfocused()
       }
     },
   },
@@ -287,9 +360,9 @@ export default {
 
       // const location = this.locations.find((l) => l.lat == lat && l.lng == lng)
       this.focusedEl = el
-      this.focused = true
+      // this.focused = true
 
-      const zoomDuration = 3300
+      const zoomDuration = this.zoomDuration
       const lat = el.getAttribute('data-lat')
       const lng = el.getAttribute('data-lng')
       if (step.index === 2 && step.direction === 'down') {
@@ -315,17 +388,32 @@ export default {
         this.map.flyTo({
           center: [lng, lat],
           zoom: this.focusedZoom,
-          duration: zoomDuration,
+          duration: this.zoomDuration,
         })
-      } else if (step.index === 5) {
-        this.map.fitBounds(bbox(wholeMemphisGeojson), {
-          duration: zoomDuration * 2,
-          padding: {
-            left: window.innerWidth * 0.33,
-            right: 0,
-            top: window.innerHeight * 0.25,
-            bottom: window.innerHeight * 0.25,
-          },
+      } else if (step.index === 6) {
+        if (this.map.getLayer('redlining')) {
+          this.map.setLayoutProperty('redlining', 'visibility', 'none')
+        }
+
+        this.map.flyTo({
+          center: [lng, lat],
+          zoom: this.focusedZoom,
+          duration: this.zoomDuration,
+        })
+
+        // this.map.fitBounds(bbox(wholeMemphisGeojson), {
+        //   duration: zoomDuration * 2,
+        //   padding: {
+        //     left: window.innerWidth * 0.33,
+        //     right: 0,
+        //     top: window.innerHeight * 0.25,
+        //     bottom: window.innerHeight * 0.25,
+        //   },
+        // })
+      } else if (step.index === 7) {
+        console.log('step 7')
+        this.map.fitBounds(bbox(finalFocusAreaGeojson), {
+          duration: 5500,
         })
       } else {
         if (!lng || !lat) return
@@ -333,7 +421,7 @@ export default {
         this.map.flyTo({
           center: [lng, lat],
           zoom: this.focusedZoom,
-          duration: zoomDuration,
+          duration: this.zoomDuration,
         })
       }
     },
@@ -341,7 +429,7 @@ export default {
       this.map.flyTo({
         center: [location.lng, location.lat],
         zoom: this.focusedZoom * 1.3,
-        duration: zoomDuration,
+        duration: this.zoomDuration,
       })
     },
     calcCenterOfMass: function () {
@@ -353,6 +441,17 @@ export default {
       const pointFeatureCollection = featureCollection(points)
       const center = centerOfMass(pointFeatureCollection)
       return center
+    },
+    onMapUnfocused: function () {
+      this.map.fitBounds(bbox(focusAreaGeojson), {
+        duration: this.zoomDuration * 1.4,
+        padding: {
+          left: 0,
+          right: 0,
+          top: 0,
+          bottom: 0,
+        },
+      })
     },
     onMapFocused: function () {
       // const zoomDuration = 8000
@@ -508,11 +607,7 @@ export default {
       } else {
         this.focused = true
       }
-
-      // detect which element is in focus
-      this.focusedEl = this.detectFocusedEl()
     },
-    detectFocusedEl() {},
     calcContainerScrollY: function (e) {
       const containerEl = this.$refs.root
       if (!containerEl) return false
@@ -568,7 +663,7 @@ export default {
 }
 
 p {
-  margin-bottom: 40vh;
+  margin-bottom: 48vh;
   padding: 2em 1.2em;
   margin-left: 2vw;
   margin-right: 2vw;

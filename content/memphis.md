@@ -58,10 +58,10 @@ Suddenly, in the scramble of preparing for war, in 1942, 50 days after the bombi
 In 1942, patriotism and pride filled newspaper headlines: “Even before the Japanese attack, the spirit of defense was evident in this Memphis Armistice Day parade of 1941,” read the caption on a cartoon depicting Uncle Sam smoking a cigar in an armchair while inspecting a photograph taken in Memphis. Over 3,500 new jobs were made available, all supporting “heroic” war efforts, and top-ranking officers were sent to town to run the Depot, including its Chemical Warfare section. [\[g\]](#cmnt7)
 
 Then, [in July 1946](https://www.google.com/url?q=https://ww3.sam.usace.army.mil/DDMT/docs/AR428-1.pdf&sa=D&source=editors&ust=1662070397033349&usg=AOvVaw0vlO1a4MDL7hoRli_w6RvX), three freight cars filled with 500-pound German mustard bombs arrived in Memphis, leaking on the way from New Orleans to Pine Bluff, Arkansas and injuring some 100 workers. Once they were removed and neutralized in Memphis, the bombs needed to be buried, and Dunn Field — that rolling, grassy patch also used as a pistol range and to test flamethrowers — appeared to be the perfect location.
-
+<!-- 
 ::graphic
 <h2 class="i">Graphic illustrating path of leaking freight cars?</h2>
-::
+:: -->
 
 The houses on Hays Road, the street that serves as Dunn Field’s eastern boundary, weren’t there yet.[\[h\]](#cmnt8) But less than a mile away, Ms. Doris’ family was busy building      what would become their three family homes, above creeks and drainage ditches, the arteries of the area.
 <!-- 
@@ -92,12 +92,13 @@ Having been redlined and targeted for slum clearance, Frank Sr.’s house was co
   
 It wasn’t the same as having their own space, and the move took a toll. In September 1951, months after being displaced from Porter Street, Eva found Frank Johnson Sr. hunched over the kitchen table without a pulse. “I think that broke him,” Frank told me. “Died suddenly without attendance,” his death certificate read. “No medical history could be obtained.”
 
+Wanting to give their mother a home of her own again, in 1959, Frank Sr.’s son William Johnson, a 27-year-old veteran and U.S. postal worker, purchased a lot in what would be the first addition to Norris View Subdivision[\[m\]](#cmnt13), where Frank Jr. would grow up in a brick house with black shutters, blocks away from the Defense Depot. A decade prior, in 1948, the Supreme Court had [struck down](https://www.google.com/url?q=https://www.law.cornell.edu/wex/shelley_v_kraemer_(1948)&sa=D&source=editors&ust=1662070397037707&usg=AOvVaw0bIi6wO7GvStY0kRQgPTo2) the use of racial covenants, which had previously prevented residents of color from purchasing homes or land in an area designated “white.” But in practice, subdivisions in much of the expanding city continued to be segregated, designed “for negros” or “for whites.”[\[n\]](#cmnt14)
+
 --- -->
 
 ::map-tour
 ::
 
-Wanting to give their mother a home of her own again, in 1959, Frank Sr.’s son William Johnson, a 27-year-old veteran and U.S. postal worker, purchased a lot in what would be the first addition to Norris View Subdivision[\[m\]](#cmnt13), where Frank Jr. would grow up in a brick house with black shutters, blocks away from the Defense Depot. A decade prior, in 1948, the Supreme Court had [struck down](https://www.google.com/url?q=https://www.law.cornell.edu/wex/shelley_v_kraemer_(1948)&sa=D&source=editors&ust=1662070397037707&usg=AOvVaw0bIi6wO7GvStY0kRQgPTo2) the use of racial covenants, which had previously prevented residents of color from purchasing homes or land in an area designated “white.” But in practice, subdivisions in much of the expanding city continued to be segregated, designed “for negros” or “for whites.”[\[n\]](#cmnt14)
 
 Back at Hamilton High, two miles from Frank’s home, we crossed back over the concrete bridge before heading to an identical one on the west side of the building. I had wanted to visit the school because Ms. Doris told me that it was built on top of Cane Creek, which according to government documents[\[o\]](#cmnt15), catches drainage emptying from the Depot. Sure enough, the creek runs directly under the school cafeteria, like a mid-south Venice-gone-wrong, before emptying into Nonconnah Creek, a larger ribbon that elbows under highways and railroad tracks until joining the Mississippi River. The bridges we crossed have, for years, provided cover for young couples stealing away for a moment alone. The slow bubbling of its water is matched by cars racing along Elvis Presley Boulevard toward downtown. It’s what Ms. Doris calls the neighborhood’s “lover’s lane.” Today, it smells of jasmine.
 
