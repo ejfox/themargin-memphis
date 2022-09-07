@@ -26,62 +26,65 @@
     </div>
 
     <div ref="mapText" class="map-text relative z-999 ml5-l measure">
-      <p class="c3" data-lat="35.08652" data-lng="-89.99542">
-        <span class="c1"
-          >But soon after her grandmother passed, Ms. Doris dug up the booklet
-          again, suspecting a connection. It turned out the government was
-          suggesting potential toxicity at the </span
-        ><span class="c9 c1"
-          ><a
-            class="c0 ph1 br2 link underline"
-            style="background-color: #e41a1c; color: white"
-            href="https://www.google.com/url?q=https://cumulis.epa.gov/supercpad/cursites/csitinfo.cfm?id%3D0404159&amp;sa=D&amp;source=editors&amp;ust=1660589865515543&amp;usg=AOvVaw1Bfi5c06aPIaiJHVhMzmKe"
-            >Memphis Defense Depot</a
-          ></span
-        ><span class="c2 c1"
-          >&nbsp;&mdash; a sprawling site that the U.S. military had used since
-          1942, as a distribution center for munitions, medical supplies and
-          petroleum products &mdash; blocks away from the Bradshaws. It was
-          vague. And only some neighbors had received it. But it seemed like
-          something everyone should be talking about.</span
-        >
+      <p data-lat="35.08652" data-lng="-89.99542">
+        Despite the lushness, many who live and go to school here didn’t
+        necessarily choose to do so, Frank impresses upon me. Like many families
+        that now reside in the area surrounding the Depot, Frank is here because
+        his family was displaced by multiple waves of racist government policy.
+        Otherwise, Frank and his family might have been living farther from the
+        Depot, closer to downtown, where his grandfather, Frank Johnson Sr.,
+        once built the family a house on Porter Street.
       </p>
 
-      <p class="c3">
-        <span class="c2 c1"
-          >So she drew up some flyers with a skull and crossbones pasted in the
-          center, calling for a meeting at her children&rsquo;s school, Norris
-          Elementary. She enlisted the help of friends and family to hit the
-          streets and make sure residents on all sides of the Defense Depot got
-          one.</span
-        >
+      <p data-lat="35.12587" data-lng="-90.0362">
+        The original structure where Frank Sr. resided with his wife, Eva, and
+        their seven children is no longer there. It was the family’s place: a
+        set of walls that they crafted and owned. Frank Sr., who escaped slavery
+        and had a fourth-grade education, worked many jobs to maintain it,
+        including as an auto mechanic, boiler helper, and farmworker. But in the
+        1940s, the Home Owners’ Loan Corporation (HOLC), a New Deal–era
+        government-sponsored corporation, redlined a vast swath of the
+        city backing up to the Mississippi River, including Porter Street,
+        designating it as hazardous.
       </p>
 
-      <p class="c3" data-lat="35.100182" data-lng="-90.017372">
-        >
-        <span class="c2 c1"
-          >On the afternoon of the meeting, families packed the
-          <span style="background-color: #984ea3; color: white"
-            >school cafeteria </span
-          >. Some had received the same booklet that Ms. Doris had, others had
-          not. But just about everyone had a story about a family member, or a
-          string of neighbors who&rsquo;d dealt with an odd combination of
-          lethal conditions: kidney disease, brain cancer, fibroids the size of
-          a cantaloupe.</span
-        >
+      <p>
+        Maps from the era note that the neighborhood could be characterized by
+        “detrimental influences in a pronounced degree” and an “under-desirable
+        population,” which implied the presence of non-whites or migrants — “or
+        an infiltration of it.” As a result of the practice, as occurred all
+        around the U.S., Black residents like Frank Sr. couldn’t obtain loans,
+        and investment was funneled elsewhere.
       </p>
-      <p class="c3">
-        <span class="c2 c1"
-          >Besides the health conditions, there was one other thing everyone in
-          the room had in common that day: they lived within walking distance of
-          the Defense Depot. Though residents didn&rsquo;t know it at the time,
-          the facility also included a 60-acre parcel of land north of the Depot
-          proper that some residents looked out onto from their front stoops, or
-          walked by en route to school, where leaking mustard bombs had been
-          buried decades ago. Known as Dunn Field, some residents wondered why
-          the oak-lined hills and valleys where this was all occurring
-          hadn&rsquo;t just been turned into a park.</span
-        >
+
+      <p data-lat="35.12487" data-lng="-90.03924">
+        Then, on the heels of the 1949 American Housing Act, which made $1.5
+        billion in federal loans and grants available for “urban redevelopment,”
+        city politicians surveyed sites that would “make available considerable
+        land and eradicate a good portion of the present slum areas,” including
+        the swells and stream channels where Frank Sr. had built his life. City
+        officials would ultimately build a major thoroughfare bisecting the area
+        diagonally, connecting a state highway with Interstate 55 and naming it
+        E.H. Crump Boulevard.
+      </p>
+
+      <p data-lat="35.13275" data-lng="-90.04676">
+        Having been redlined and targeted for slum clearance, Frank Sr.’s house
+        was condemned: the first, but not the last time that racist housing
+        policy would encroach on the family’s health and ability to grow wealth,
+        Frank told me. One day in 1950, Frank Sr. and his family returned home
+        to find all their belongings on the front lawn. The family moved up the
+        road, into a public housing project known as Foote Homes, which would
+        later be found to have been built on contaminated soil.
+      </p>
+
+      <p>
+        It wasn’t the same as having their own space, and the move took a toll.
+        In September 1951, months after being displaced from Porter Street, Eva
+        found Frank Johnson Sr. hunched over the kitchen table without a pulse.
+        “I think that broke him,” Frank told me. “Died suddenly without
+        attendance,” his death certificate read. “No medical history could be
+        obtained.”
       </p>
     </div>
   </section>
@@ -199,7 +202,7 @@ export default {
       containerScrollY: 0,
       focused: false,
       initialZoom: 5,
-      focusedZoom: 14,
+      focusedZoom: 16,
       locations: [
         // {
         //   name: 'Memphis Depot',
@@ -207,6 +210,14 @@ export default {
         //   lng: -89.99542,
         //   color: '#e41a1c',
         // },
+        {
+          name: 'Foote Homes',
+          // 35.13274686904458, -90.04675594297821
+          lat: 35.13274686904458,
+          lng: -90.04675594297821,
+          // yellow color
+          color: '#ffff33',
+        },
         {
           name: 'Frank Sr. former home',
           lat: 35.12587,
@@ -240,7 +251,12 @@ export default {
       ],
     }
   },
-  computed: {},
+  computed: {
+    isMobile: function () {
+      const screenWidth = window.innerWidth
+      return screenWidth < 768
+    },
+  },
   mounted: function () {
     this.setUpMapboxMap()
 
@@ -250,7 +266,7 @@ export default {
         step: '.map-text p',
         // debug: true,
         // offset: 0.75,
-        offset: 0.6,
+        offset: 0.65,
       })
       .onStepEnter(this.onStepEnter)
 
@@ -268,35 +284,52 @@ export default {
     onStepEnter(step) {
       // console.log('step', step)
       const el = step.element
-      const lat = el.getAttribute('data-lat')
-      const lng = el.getAttribute('data-lng')
-      if (!lng || !lat) return
+
       // const location = this.locations.find((l) => l.lat == lat && l.lng == lng)
       this.focusedEl = el
       this.focused = true
 
-      const zoomDuration = step.index === 0 ? 6000 : 3000
-
-      if (step.index === 0) {
-        this.map.fitBounds(bbox(focusAreaGeojson), {
-          duration: zoomDuration,
+      const zoomDuration = 3300
+      const lat = el.getAttribute('data-lat')
+      const lng = el.getAttribute('data-lng')
+      if (step.index === 2 && step.direction === 'down') {
+        // show redlining map layer
+        this.map.setLayoutProperty('redlining', 'visibility', 'visible')
+        this.map.fitBounds(bbox(wholeMemphisGeojson), {
+          duration: zoomDuration * 1.4,
           padding: {
-            // left: 300,
-            // use window width to make padding left a percentage
-            left: window.innerWidth ? window.innerWidth * 0.35 : 300,
-            right: 20,
-            top: 20,
-            bottom: 20,
+            left: window.innerWidth * 0.3,
+            right: 0,
+            top: 0,
+            bottom: 0,
           },
         })
-        // wait the zoom duration, and then easeTo with a pitch
-        setTimeout(() => {
-          this.map.easeTo({
-            pitch: 45,
-            duration: zoomDuration,
-          })
-        }, zoomDuration)
+      } else if (step.index === 2 && step.direction === 'up') {
+        // if the redlining layer exists, hide it
+        if (this.map.getLayer('redlining')) {
+          this.map.setLayoutProperty('redlining', 'visibility', 'none')
+        }
+      } else if (step.index === 3) {
+        // set the redlining layer opacity to 0.3
+        this.map.setPaintProperty('redlining', 'raster-opacity', 0.5)
+        this.map.flyTo({
+          center: [lng, lat],
+          zoom: this.focusedZoom,
+          duration: zoomDuration,
+        })
+      } else if (step.index === 5) {
+        this.map.fitBounds(bbox(wholeMemphisGeojson), {
+          duration: zoomDuration * 2,
+          padding: {
+            left: window.innerWidth * 0.33,
+            right: 0,
+            top: window.innerHeight * 0.25,
+            bottom: window.innerHeight * 0.25,
+          },
+        })
       } else {
+        if (!lng || !lat) return
+        // console.log('flying to', lat, lng)
         this.map.flyTo({
           center: [lng, lat],
           zoom: this.focusedZoom,
@@ -322,26 +355,23 @@ export default {
       return center
     },
     onMapFocused: function () {
-      const zoomDuration = 8000
-
+      // const zoomDuration = 8000
       // fit to bounds of whole Memphis
-      this.map.fitBounds(bbox(wholeMemphisGeojson), {
-        duration: zoomDuration,
-        padding: {
-          left: 20,
-          right: 20,
-          top: 20,
-          bottom: 20,
-        },
-      })
-
+      // this.map.fitBounds(bbox(wholeMemphisGeojson), {
+      //   duration: zoomDuration,
+      //   padding: {
+      //     left: 20,
+      //     right: 20,
+      //     top: 20,
+      //     bottom: 20,
+      //   },
+      // })
       // this.map.easeTo({
       //   zoom: this.focusedZoom,
       //   pitch: 55,
       //   bearing: -32,
       //   duration: zoomDuration,
       // })
-
       // // after 8 seconds do this.map.setStyle to this style: 'mapbox://styles/mapbox/satellite-v9',
       // setTimeout(
       //   function () {
@@ -351,6 +381,41 @@ export default {
       // )
     },
     onMapLoaded: function () {
+      // add mapboxgl controls
+      this.map.addControl(new mapboxgl.NavigationControl())
+
+      // add geotif source from ejfox.2kyqw8bg
+      this.map.addSource('redlining', {
+        type: 'raster',
+        url: 'mapbox://ejfox.41w7bf5g',
+      })
+
+      this.map.addLayer({
+        id: 'redlining',
+        type: 'raster',
+        source: 'redlining',
+        paint: {
+          'raster-opacity': 0.75,
+        },
+      })
+
+      this.map.setLayoutProperty('redlining', 'visibility', 'none')
+
+      this.map.fitBounds(bbox(wholeMemphisGeojson), {
+        duration: 0,
+        padding: {
+          left: 20,
+          right: 20,
+          top: 20,
+          bottom: 20,
+        },
+      })
+
+      this.map.easeTo({
+        pitch: 45,
+        duration: 0,
+      })
+
       // create markers for all locations in this.locations
       this.locations.forEach(
         function (location) {
@@ -426,7 +491,7 @@ export default {
         source: 'memphis-depot',
         paint: {
           'fill-color': '#ff7f00',
-          'fill-opacity': 0.5,
+          'fill-opacity': 0.2,
         },
       })
     },
@@ -474,11 +539,15 @@ export default {
         // 'pk.eyJ1IjoiZWpmb3giLCJhIjoiY2lyZjd0bXltMDA4b2dma3JzNnA0ajh1bSJ9.iCmlE7gmJubz2RtL4RFzIw',
 
         // projection: 'globe',
+        projection: 'mercator',
       })
 
       this.map.on('load', this.onMapLoaded)
-
+      // Disable zoom scrolling
       this.map.scrollZoom.disable()
+
+      // Disable panning
+      if (this.isMobile) this.map.dragPan.disable()
     },
   },
 }
