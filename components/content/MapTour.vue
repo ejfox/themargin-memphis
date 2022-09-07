@@ -26,7 +26,10 @@
     </div>
 
     <div ref="mapText" class="map-text relative z-999 ml5-l measure">
-      <p data-lat="35.08652" data-lng="-89.99542">
+      <!-- <p data-lat="35.08652" data-lng="-89.99542"> -->
+
+      <!-- [-89.999185, 35.102215] -->
+      <p data-lat="35.102215" data-lng="-89.999185">
         Despite the lushness, many who live and go to school here didn’t
         necessarily choose to do so, Frank impresses upon me. Like many families
         that now reside in the area surrounding the Depot, Frank is here because
@@ -257,6 +260,33 @@ const finalFocusAreaGeojson = {
   ],
 }
 
+const initialViewGeojson = {
+  type: 'FeatureCollection',
+  features: [
+    {
+      type: 'Feature',
+      properties: {
+        shape: 'Rectangle',
+        name: 'Unnamed Layer',
+        category: 'default',
+      },
+      geometry: {
+        type: 'Polygon',
+        coordinates: [
+          [
+            [-90.014892, 35.085641],
+            [-89.981933, 35.085641],
+            [-89.981933, 35.110852],
+            [-90.014892, 35.110852],
+            [-90.014892, 35.085641],
+          ],
+        ],
+      },
+      id: '83fa7a9e-cf4c-44e7-a4ac-70c5d2351af1',
+    },
+  ],
+}
+
 export default {
   name: 'MemphisContextHeroMap',
   props: {
@@ -365,7 +395,17 @@ export default {
       const zoomDuration = this.zoomDuration
       const lat = el.getAttribute('data-lat')
       const lng = el.getAttribute('data-lng')
-      if (step.index === 2 && step.direction === 'down') {
+      if (step.index === 0) {
+        this.map.fitBounds(bbox(initialViewGeojson), {
+          duration: zoomDuration * 1.4,
+          padding: {
+            left: window.innerWidth * 0.3,
+            right: 0,
+            top: 0,
+            bottom: 0,
+          },
+        })
+      } else if (step.index === 2 && step.direction === 'down') {
         // show redlining map layer
         this.map.setLayoutProperty('redlining', 'visibility', 'visible')
         this.map.fitBounds(bbox(wholeMemphisGeojson), {
