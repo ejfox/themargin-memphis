@@ -7,24 +7,6 @@
     </h2> -->
     <div id="map" class="w-100 vh-100 z-1 top-0" ref="mapRoot"></div>
 
-    <!-- color legend for all locations -->
-
-    <div class="location-legend relative z-999 w-100 center dn">
-      <div
-        v-for="(location, index) in locations"
-        :key="index"
-        @click="flyToLocation(location)"
-        class="location-legend-item dib ma2 pointer"
-      >
-        <div
-          class="location-legend-item-color pa2 b tc br3 f4 white"
-          :style="{ backgroundColor: location.color }"
-        >
-          {{ location.name }}
-        </div>
-      </div>
-    </div>
-
     <div ref="mapText" class="map-text relative z-999 ml5-l measure">
       <!-- <p data-lat="35.08652" data-lng="-89.99542"> -->
 
@@ -39,7 +21,13 @@
         once built the family a house on Porter Street.
       </p>
 
-      <p data-lat="35.12587" data-lng="-90.0362">
+      <p
+        data-lat="35.12587"
+        data-lng="-90.0362"
+        data-place-marker="true"
+        data-marker-color="blue"
+        data-marker-text="Frank Sr. former home"
+      >
         The original structure where Frank Sr. resided with his wife, Eva, and
         their seven children is no longer there. It was the family’s place: a
         set of walls that they crafted and owned. Frank Sr., who escaped slavery
@@ -71,7 +59,13 @@
         E.H. Crump Boulevard.
       </p>
 
-      <p data-lat="35.13275" data-lng="-90.04676">
+      <p
+        data-lat="35.13275"
+        data-lng="-90.04676"
+        data-place-marker="true"
+        data-marker-color="green"
+        data-marker-text="Foote Homes"
+      >
         Having been redlined and targeted for slum clearance, Frank Sr.’s house
         was condemned: the first, but not the last time that racist housing
         policy would encroach on the family’s health and ability to grow wealth,
@@ -90,7 +84,13 @@
         obtained.”
       </p>
 
-      <p data-lat="35.08566" data-lng="-90.01443">
+      <p
+        data-lat="35.07857555947834"
+        data-lng="-90.01542349339891"
+        data-place-marker="true"
+        data-marker-color="orange"
+        data-marker-text="Norris View Subdivision"
+      >
         Wanting to give their mother a home of her own again, in 1959, Frank
         Sr.’s son William Johnson, a 27-year-old veteran and U.S. postal worker,
         purchased a lot in what would be the first addition to Norris View
@@ -287,6 +287,75 @@ const initialViewGeojson = {
   ],
 }
 
+const railroadLinessGeojson = {
+  type: 'FeatureCollection',
+  features: [
+    {
+      type: 'Feature',
+      properties: {
+        shape: 'Line',
+        name: 'Railroad 1',
+        category: 'default',
+      },
+      geometry: {
+        type: 'LineString',
+        coordinates: [
+          [-89.962115, 35.078407],
+          [-89.967436, 35.083043],
+          [-89.972285, 35.087221],
+          [-89.975889, 35.090171],
+          [-89.988247, 35.096667],
+          [-90.003865, 35.104602],
+          [-90.00541, 35.10541],
+          [-90.007255, 35.106709],
+          [-90.011503, 35.110711],
+        ],
+      },
+      id: 'fac44442-a8f5-4df2-8c70-bc77e00f9289',
+    },
+    {
+      type: 'Feature',
+      properties: {
+        shape: 'Line',
+        name: 'Unnamed Layer',
+        category: 'default',
+      },
+      geometry: {
+        type: 'LineString',
+        coordinates: [
+          [-90.011503, 35.110711],
+          [-90.018544, 35.118855],
+          [-90.022835, 35.122647],
+        ],
+      },
+      id: '459a8af9-d3ec-4f91-99ed-9826bbe6b74c',
+    },
+    {
+      type: 'Feature',
+      properties: {
+        shape: 'Line',
+        name: 'Railroad 2',
+        category: 'default',
+      },
+      geometry: {
+        type: 'LineString',
+        coordinates: [
+          [-90.043603, 35.076721],
+          [-90.040685, 35.077704],
+          [-90.033562, 35.081848],
+          [-89.990396, 35.107552],
+          [-89.985848, 35.111413],
+          [-89.982415, 35.114081],
+          [-89.980613, 35.115766],
+          [-89.978296, 35.117592],
+          [-89.973061, 35.125033],
+        ],
+      },
+      id: '5760ca20-4487-4346-a0a3-64cd899f5a68',
+    },
+  ],
+}
+
 export default {
   name: 'MemphisContextHeroMap',
   props: {
@@ -304,52 +373,51 @@ export default {
       initialZoom: 5,
       focusedZoom: 16,
       zoomDuration: 3300,
-      locations: [
-        // {
-        //   name: 'Memphis Depot',
-        //   lat: 35.08652,
-        //   lng: -89.99542,
-        //   color: '#e41a1c',
-        // },
-        {
-          name: 'Foote Homes',
-          // 35.13274686904458, -90.04675594297821
-          lat: 35.13274686904458,
-          lng: -90.04675594297821,
-          // yellow color
-          color: '#ffff33',
-        },
-        {
-          name: 'Frank Sr. former home',
-          lat: 35.12587,
-          lng: -90.0362,
-          color: '#377eb8',
-        },
-        {
-          name: 'Family home impacted by Dunn Field contents',
-          lat: 35.09519,
-          lng: -90.00734,
-          color: '#4daf4a',
-        },
-        {
-          name: 'Hamilton High School',
-          lat: 35.100182,
-          lng: -90.017372,
-          color: '#984ea3',
-        },
-        {
-          name: 'Ms. Doris home',
-          lat: 35.08566,
-          lng: -90.01443,
-          color: '#ff7f00',
-        },
-        // {
-        //   name: 'Dunn Field',
-        //   lat: 35.09519,
-        //   lng: -90.00734,
-        //   color: '#00ffff',
-        // },
-      ],
+      // locations: [
+      //   // {
+      //   //   name: 'Memphis Depot',
+      //   //   lat: 35.08652,
+      //   //   lng: -89.99542,
+      //   //   color: '#e41a1c',
+      //   // },
+      //   {
+      //     name: 'Foote Homes',
+      //     // 35.13274686904458, -90.04675594297821
+      //     lat: 35.13274686904458,
+      //     lng: -90.04675594297821,
+      //     color: '#ffff33',
+      //   },
+      //   {
+      //     name: 'Frank Sr. former home',
+      //     lat: 35.12587,
+      //     lng: -90.0362,
+      //     color: '#377eb8',
+      //   },
+      //   {
+      //     name: 'Family home impacted by Dunn Field contents',
+      //     lat: 35.09519,
+      //     lng: -90.00734,
+      //     color: '#4daf4a',
+      //   },
+      //   {
+      //     name: 'Hamilton High School',
+      //     lat: 35.100182,
+      //     lng: -90.017372,
+      //     color: '#984ea3',
+      //   },
+      //   {
+      //     name: 'Ms. Doris home',
+      //     lat: 35.08566,
+      //     lng: -90.01443,
+      //     color: '#ff7f00',
+      //   },
+      //   // {
+      //   //   name: 'Dunn Field',
+      //   //   lat: 35.09519,
+      //   //   lng: -90.00734,
+      //   //   color: '#00ffff',
+      //   // },
+      // ],
     }
   },
   computed: {
@@ -384,6 +452,9 @@ export default {
     },
   },
   methods: {
+    addMarker(lat, lng, markerColor, markerText) {
+      this.map
+    },
     onStepEnter(step) {
       // console.log('step', step)
       const el = step.element
@@ -395,6 +466,54 @@ export default {
       const zoomDuration = this.zoomDuration
       const lat = el.getAttribute('data-lat')
       const lng = el.getAttribute('data-lng')
+
+      const placeMarker = el.getAttribute('data-place-marker')
+      const markerColor = el.getAttribute('data-marker-color')
+      const markerText = el.getAttribute('data-marker-text')
+
+      // place all locations like this:
+      // this.locations.forEach(
+      //   function (location) {
+      //     const popup = new mapboxgl.Popup({ offset: 25 }).setText(
+      //       location.name
+      //     )
+      //     const el = document.createElement('div')
+
+      //     const marker = new mapboxgl.Marker({
+      //       color: location.color,
+      //     })
+      //       .setLngLat([location.lng, location.lat])
+      //       .setPopup(popup)
+      //       .addTo(this.map)
+      //   }.bind(this)
+      // )
+
+      if (placeMarker) {
+        // place single location like this:
+        const popup = new mapboxgl.Popup({ offset: 25 }).setText(markerText)
+        const el = document.createElement('div')
+
+        // const marker = new mapboxgl.Marker({
+        //   color: markerColor,
+        // })
+        //   .setLngLat([lng, lat])
+        //   .setPopup(popup)
+        //   .addTo(this.map)
+
+        // wait this.zoomDuration then add to map
+        setTimeout(
+          function () {
+            const marker = new mapboxgl.Marker({
+              color: markerColor,
+            })
+              .setLngLat([lng, lat])
+              .setPopup(popup)
+              .addTo(this.map)
+          }.bind(this),
+          zoomDuration * 0.5
+        )
+      }
+
       if (step.index === 0) {
         this.map.fitBounds(bbox(initialViewGeojson), {
           duration: zoomDuration * 1.4,
@@ -455,6 +574,17 @@ export default {
         this.map.fitBounds(bbox(finalFocusAreaGeojson), {
           duration: 5500,
         })
+        // add marker for hamilton high school
+        const popup = new mapboxgl.Popup({ offset: 25 }).setText(
+          'Hamilton High School'
+        )
+        const el = document.createElement('div')
+        const marker = new mapboxgl.Marker({
+          color: '#984ea3',
+        })
+          .setLngLat([-90.017372, 35.100182])
+          .setPopup(popup)
+          .addTo(this.map)
       } else {
         if (!lng || !lat) return
         // console.log('flying to', lat, lng)
@@ -471,16 +601,6 @@ export default {
         zoom: this.focusedZoom * 1.3,
         duration: this.zoomDuration,
       })
-    },
-    calcCenterOfMass: function () {
-      // use turf.point to turn locations into array of points
-      const points = this.locations.map(function (location) {
-        return point([location.lat, location.lng])
-      })
-      // turn points into a feature collection
-      const pointFeatureCollection = featureCollection(points)
-      const center = centerOfMass(pointFeatureCollection)
-      return center
     },
     onMapUnfocused: function () {
       this.map.fitBounds(bbox(focusAreaGeojson), {
@@ -556,55 +676,55 @@ export default {
       })
 
       // create markers for all locations in this.locations
-      this.locations.forEach(
-        function (location) {
-          const popup = new mapboxgl.Popup({ offset: 25 }).setText(
-            location.name
-          )
-          const el = document.createElement('div')
+      // this.locations.forEach(
+      //   function (location) {
+      //     const popup = new mapboxgl.Popup({ offset: 25 }).setText(
+      //       location.name
+      //     )
+      //     const el = document.createElement('div')
 
-          const marker = new mapboxgl.Marker({
-            color: location.color,
-          })
-            .setLngLat([location.lng, location.lat])
-            .setPopup(popup)
-            .addTo(this.map)
-        }.bind(this)
-      )
+      //     const marker = new mapboxgl.Marker({
+      //       color: location.color,
+      //     })
+      //       .setLngLat([location.lng, location.lat])
+      //       .setPopup(popup)
+      //       .addTo(this.map)
+      //   }.bind(this)
+      // )
 
       // add labels for all locations in this.locations as geojson
       // first create an array of points for each location
-      const points = this.locations.map(function (location) {
-        return point([location.lng, location.lat], {
-          name: location.name,
-          color: location.color,
-        })
-      })
-      // then create a feature collection from the points
-      const pointFeatureCollection = featureCollection(points)
-      // then add the feature collection to the map
-      this.map.addSource('points', {
-        type: 'geojson',
-        data: pointFeatureCollection,
-      })
-      // then add the labels to the map
-      this.map.addLayer({
-        id: 'labels',
-        type: 'symbol',
-        source: 'points',
-        layout: {
-          'text-field': ['get', 'name'],
-          'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
-          'text-offset': [0, 0.6],
-          // 'text-transform': 'uppercase',
-          'text-anchor': 'top',
-        },
-        paint: {
-          'text-color': ['get', 'color'],
-          'text-halo-color': '#fff',
-          'text-halo-width': 1,
-        },
-      })
+      // const points = this.locations.map(function (location) {
+      //   return point([location.lng, location.lat], {
+      //     name: location.name,
+      //     color: location.color,
+      //   })
+      // })
+      // // then create a feature collection from the points
+      // const pointFeatureCollection = featureCollection(points)
+      // // then add the feature collection to the map
+      // this.map.addSource('points', {
+      //   type: 'geojson',
+      //   data: pointFeatureCollection,
+      // })
+      // // then add the labels to the map
+      // this.map.addLayer({
+      //   id: 'labels',
+      //   type: 'symbol',
+      //   source: 'points',
+      //   layout: {
+      //     'text-field': ['get', 'name'],
+      //     'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
+      //     'text-offset': [0, 0.6],
+      //     // 'text-transform': 'uppercase',
+      //     'text-anchor': 'top',
+      //   },
+      //   paint: {
+      //     'text-color': ['get', 'color'],
+      //     'text-halo-color': '#fff',
+      //     'text-halo-width': 1,
+      //   },
+      // })
 
       // add memphis depot as geojson, with orange fill
       this.map.addSource('memphis-depot', {
@@ -667,8 +787,6 @@ export default {
         accessToken:
           'pk.eyJ1IjoiZWpmb3giLCJhIjoiY2lyZjd0bXltMDA4b2dma3JzNnA0ajh1bSJ9.iCmlE7gmJubz2RtL4RFzIw',
         center: [-89.99542, 35.08652],
-        // make center centerOfMass of all locations
-        // center: this.calcCenterOfMass(),
         zoom: this.initialZoom,
 
         // 'pk.eyJ1IjoiZWpmb3giLCJhIjoiY2lyZjd0bXltMDA4b2dma3JzNnA0ajh1bSJ9.iCmlE7gmJubz2RtL4RFzIw',
