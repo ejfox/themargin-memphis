@@ -1,3 +1,3 @@
 <template>
-  <SuperfundSiteExplorer />
+  <SkagitSuperfundSiteExplorer />
 </template>

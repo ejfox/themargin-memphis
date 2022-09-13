@@ -96,7 +96,7 @@ Wanting to give their mother a home of her own again, in 1959, Frank Sr.’s son
 
 --- -->
 
-::map-tour
+::memphis-map-tour
 ::
 
 
@@ -117,7 +117,7 @@ Her work took her far and wide, sometimes to Arkansas, to visit her friend Evely
 
 ## All Superfund Sites in the U.S.
 ### There are thousands of military superfund sites across the US, TK have been cleaned up and TK are still in the process of being cleaned up.
-::superfund-site-explorer
+::memphis-superfund-site-explorer
 ::
 
 As Ms. Doris continued to meet others with parallel stories – so similar, yet hundreds of miles away from Memphis – she was struck by memories and retrospective realizations of exposure. She thought about the pipes and how that gooseneck bend below the kitchen sink never lasted more than a year before needing to be replaced. “That metal, it’d crumble in your hand. So, whatever was in the water, we had all got it in us,” Ms. Doris remembered. She thought back to how when she took her old Scottish Terrier, Princess, out into the grass for her morning pee, they both developed blisters on their legs where they brushed up against the dew. She thought, too, about the time when her son Rudolph’s neck swelled up so badly after playing in a pile of soil dug up from a Cane Creek culvert that she had to rush him to the hospital.  

@@ -1,3 +1,3 @@
 <template>
-  <MapTour />
+  <SkagitMapTour />
 </template>
