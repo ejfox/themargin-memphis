@@ -26,9 +26,6 @@ On Aug. 5, 2021, a day after City Light announced it would conduct the assessmen
 
 At the first “in-person” Seattle City Council meeting on June 7, a handful of the city council members’ faces were projected on a screen as a giant timer ticked down from two minutes during the public comment period. After several attempts to get answers from City Councilmembers, I made a last-ditch effort and asked the city if they would commit to removing one or all of the dams, an action that appeared to be in line with their policies and wouldn’t materially affect their operations. Again, no response was given.
 
-::SkagitMapTour
-::
-
 ## From the Peaks to the Sea
 
 One of the main arteries of the Salish Sea, the Skagit River flows from the western edge of the Cascade Mountain range north of Seattle into Puget Sound. Fish passage, also known as a fishway, is a mitigation measure that allows migratory fish, such as salmon, to move upstream and downstream of blockages, like hydroelectric dams. Because salmon are born in the streams and migrate to the ocean and return to their birthplaces to spawn, access to the entirety of an ecologically intact watershed is essential for their flourishing and, in turn, their existence for the tribes and their treaty-guaranteed fishing rights.
@@ -51,9 +48,18 @@ When the state of Washington criminalized the tribe’s right to fish, Schuyler�
 
 ## Indian Power
 
-Long before the city dammed the river for cheap power, a different kind of power existed. “We have what’s called Indian Power,” Schuyler said. “Right now, the river is not clean – not pure – the impurities being hydroelectric dams,” he said, adding that as the river goes through the hydroelectric system, it’s defiled. As a result, a core part of their religious belief system – the ability to draw on this Skagit power – is greatly diminished.
+::SkagitMapTour
+::
 
-According to Upper Skagit oral literature, that power, S.g[\[1\]](#ftnt1)wǝdílic (Skwa-dee-litch), was the eldest of four brothers; among them were Fire and Knife. Long ago, S.g[\[2\]](#ftnt2)wǝdílic walked up the Skagit River with his brothers, giving everything a name: the mountains, the lakes, the creeks, the tribes, and their villages. He put salmon in every creek. Knife taught the people to cut up and prepare the fish, while Fire taught the people how to cook them. Following this, S.g[\[3\]](#ftnt3)wǝdílic prepared to leave. “I’m going to be power now,” he said. S.g[\[4\]](#ftnt4)wǝdílic said the Upper Skagit would later find him, and then dove into the depths of the river beneath Skagit Falls. Schuyler said the project, along with logging and mining in the upper reaches of the river, detracts from the purity of S.g[\[5\]](#ftnt5)wǝdílic’s power, Indian Power, which in the Upper Skagit’s sense of being, is interlinked with salmon. “For every action there is an effect,” he said, referring to the hydroelectric dams. “Who bears the burden of the effect? Is it our tribal culture and our history that have to bear the burden of this? Is it the salmon?” Schuyler asked.
+<!-- Long before the city dammed the river for cheap power, a different kind of power existed. “We have what’s called Indian Power,” Schuyler said. “Right now, the river is not clean – not pure – the impurities being hydroelectric dams,” he said, adding that as the river goes through the hydroelectric system, it’s defiled. As a result, a core part of their religious belief system – the ability to draw on this Skagit power – is greatly diminished.
+
+According to Upper Skagit oral literature, that power, S.g[\[1\]](#ftnt1)wǝdílic (Skwa-dee-litch), was the eldest of four brothers; among them were Fire and Knife. Long ago, S.g[\[2\]](#ftnt2)wǝdílic walked up the Skagit River with his brothers, giving everything a name: the mountains, the lakes, the creeks, the tribes, and their villages. 
+
+He put salmon in every creek. Knife taught the people to cut up and prepare the fish, while Fire taught the people how to cook them. Following this, S.g[\[3\]](#ftnt3)wǝdílic prepared to leave. “I’m going to be power now,” he said. S.g[\[4\]](#ftnt4)wǝdílic said the Upper Skagit would later find him, and then dove into the depths of the river beneath Skagit Falls. 
+
+Schuyler said the project, along with logging and mining in the upper reaches of the river, detracts from the purity of S.g[\[5\]](#ftnt5)wǝdílic’s power, Indian Power, which in the Upper Skagit’s sense of being, is interlinked with salmon. 
+
+“For every action there is an effect,” he said, referring to the hydroelectric dams. “Who bears the burden of the effect? Is it our tribal culture and our history that have to bear the burden of this? Is it the salmon?” Schuyler asked. -->
 
 Schuyler points to his bookshelf at a riverstone-smooth fish club shaped like a salmon. He said it was found in what was once called the village of Sigwigwilse, now called Sedro-Wooley. To its credit, Schuyler said, the city recently returned ownership of many of his ancestors’ belongings that were taken from the Upper Skagit village of Daxwálib, now known as Newhalem, when the city excavated its still-standing company town that provides for dam operations. Following media coverage of the return, a private citizen reached out to the tribe and returned the fish club, along with other items. The tribe’s ethno-historian called it a prestige piece, Schuyler said. “You can see where it was quartered at one time with deer sinew.” Although they haven’t figured out its exact use, they believe it was utilized during the processing of fish, perhaps for mashing salmon. As he holds it in his hand, I ask him of the significance of the stone salmon. “It’s channeling back to the past,” he said.
 
@@ -62,6 +68,10 @@ Even though Upper Skagit and First Nations oral literature proves that salmon sw
 The tribes have strong legal standing in the matter of salmon: the 1974 Boldt Decision guaranteed the tribes’ right to fish in their usual and accustomed areas and harvest 50 percent of the available salmon runs; the other half going to the state of Washington. For the Upper Skagit, this includes the Skagit River from Mount Vernon up into the headwaters of Canada. Further, in 2018, the Supreme Court affirmed a Ninth Circuit ruling in what is known as the Culverts Case, which found that human-constructed impediments to fish passage are impermissible limitations on tribes’ treaty-guaranteed fishing rights.
 
 With these powerful legal rights to fish for salmon, steelhead, and trout, the tribes are at the forefront of the fight. Although they can’t require the city do anything to protect these species as part of the relicensing – something they believe is unjust – the federal agencies, who hold the tribes’ treaty rights in trust, are required by federal law to do so. Schuyler’s tribe has successfully pushed the city to accede to controversial concessions, including studying fish passage and dam removal, which the city previously refused to do. The neighboring Swinomish tribe has also remained engaged in the relicensing. Swinomish Tribal Chairman Steve Edwards said his people have always wanted a free-flowing Skagit River and will hold the city accountable to his tribes’ treaty rights. The nearby Sauk-Suiattle Tribe has also filed innovative lawsuits against Seattle, challenging the city on the alleged impacts of their dams on the salmon and their culture.
+
+::graphic-large
+<h2>Historical Map [Source](https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~2229~200038:Washington-Territory-;JSESSIONID=a4227ea7-6191-4cbc-86d0-dab887ff5881?title=Search+Results%3A+List_No+equal+to+%273461.000%27&thumbnailViewUrlKey=link.view.search.url&fullTextSearchChecked=&annotSearchChecked=&dateRangeSearchChecked=&showShareIIIFLink=true&helpUrl=https%3A%2F%2Fdocumentation.lunaimaging.com%2Fdisplay%2FV75D%2FLUNA%2BViewer%23LUNAViewer-LUNAViewer&showTip=false&showTipAdvancedSearch=false&advancedSearchUrl=https%3A%2F%2Fdocumentation.lunaimaging.com%2Fdisplay%2FV75D%2FSearching%23Searching-Searching)</h2>
+::
 
 ## The Onslaught of American Colonization
 
@@ -76,6 +86,10 @@ After signing the treaty, Schuyler’s ancestors resisted both encroachment and 
 With the increase in settlers came consequences for the salmon and their people. Settlers used the same fishing techniques they’d developed in Europe, contributing to a large commercial fishery at the beginning of the 20th century.\[3\] This practice annihilated salmon runs, causing the rapid decline of salmon returning to their home rivers to spawn and thus reducing the salmon available to the tribes to exercise their treaty-guaranteed fishing right. With the decimation of salmon runs, tribes and their cultures also came under existential threat, inflicting them with widespread trauma.
 
 ## The Romance of Cheap Power
+
+::graphic-large
+<h2>Animation of Dams being created 1830-1930</h2>
+::
 
 An air conditioning vent drones from the floor, a faint trace of diesel exhaust trickling in, and a jackhammer slams cement outside the window. I pour over troves of City Light documents in the city’s municipal archives, most of which deal with the impact of a single man, J.D. Ross. Ross arrived in Seattle and was appointed superintendent of lighting in 1911. He was quite possibly the godfather of City Light’s dependence on cheap hydroelectric power. In 1917, as Schuyler’s ancestors were fighting for their very survival, unable to vote in U.S. elections, Ross traveled to Marblemount on the Skagit River and nailed notices to trees asserting the city’s plans to dam the river for hydroelectricity. “As if by foresight, as if in preparation for the day when hydroelectric power would be discovered by man, Nature carved the Skagit canyon across the face of the Cascades, and poured through the sheer cliffs the ceaseless torrent of water that carries a limitless supply of power to the broad valley below,” stated a 1938 radio broadcast mythologizing the city’s dams. Later, Ross traveled to Washington, D.C. to raise money for the project, arguing it was essential for the efforts of World War I.
 
@@ -98,6 +112,10 @@ These shortcomings in the Federal Power Act prevented the Upper Skagit from havi
 The loss of land under treaties, federal legislation, the decimation of salmon resources, dams blocking salmon passage, and the forced removal of children contributed to a series of many traumas inflicted on the Upper Skagit and other tribes by local, state, and federal governments. The trauma has culminated with the tribe’s lack of prescriptive authority in the FERC relicensing process of the Skagit dams, which directly impact their sacred place of origin and to a presently unknown degree, the salmon their culture relies on.
 
 Meanwhile, the city’s dam project continues to operate. The draft license application is due in December and the final license application is due in April 2023. City Light has a significant amount of research to conduct between now and then.
+
+::graphic-large
+<h2>Timeline</h2>
+::
 
 ## Returning Home to the Sacred Skagit
 

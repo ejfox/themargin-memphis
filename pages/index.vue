@@ -7,6 +7,8 @@
     >
     <NuxtLink to="/skagit" class="link black underline db mv3">Skagit</NuxtLink>
 
+    <NuxtLink to="/houma" class="link black underline db mv3">Houma</NuxtLink>
+
     <h2>Components</h2>
     <NuxtLink to="/MapTour" class="link black underline db mv3"
       >Memphis: Map Tour</NuxtLink

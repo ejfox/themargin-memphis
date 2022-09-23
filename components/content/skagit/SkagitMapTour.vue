@@ -3,13 +3,38 @@
     <div id="map" class="w-100 vh-100 z-1 top-0" ref="mapRoot"></div>
 
     <div ref="mapText" class="map-text relative z-999 ml5-l measure">
-      <p data-lat="48.51603801371454" data-lng="-122.08473814464001">
-        Skagit River
+      <p>
+        Long before the city dammed the river for cheap power, a different kind
+        of power existed. “We have what’s called Indian Power,” Schuyler said.
+        “Right now, the river is not clean – not pure – the impurities being
+        hydroelectric dams,” he said, adding that as the river goes through the
+        hydroelectric system, it’s defiled. As a result, a core part of their
+        religious belief system – the ability to draw on this Skagit power – is
+        greatly diminished.
       </p>
 
-      <!-- Gorge Dam: 48.697883355966226, -121.2082851386443 -->
-      <p data-lat="48.697883355966226" data-lng="-121.2082851386443">
-        Gorge Dam
+      <p>
+        According to Upper Skagit oral literature, that power,
+        S.g[\[1\]](#ftnt1)wǝdílic (Skwa-dee-litch), was the eldest of four
+        brothers; among them were Fire and Knife. Long ago,
+        S.g[\[2\]](#ftnt2)wǝdílic walked up the Skagit River with his brothers,
+        giving everything a name: the mountains, the lakes, the creeks, the
+        tribes, and their villages.
+      </p>
+
+      <p>
+        He put salmon in every creek. Knife taught the people to cut up and
+        prepare the fish, while Fire taught the people how to cook them.
+        Following this, S.g[\[3\]](#ftnt3)wǝdílic prepared to leave. “I’m going
+        to be power now,” he said. S.g[\[4\]](#ftnt4)wǝdílic said the Upper
+        Skagit would later find him, and then dove into the depths of the river
+        beneath Skagit Falls. Schuyler said the project, along with logging and
+        mining in the upper reaches of the river, detracts from the purity of
+        S.g[\[5\]](#ftnt5)wǝdílic’s power, Indian Power, which in the Upper
+        Skagit’s sense of being, is interlinked with salmon. “For every action
+        there is an effect,” he said, referring to the hydroelectric dams. “Who
+        bears the burden of the effect? Is it our tribal culture and our history
+        that have to bear the burden of this? Is it the salmon?” Schuyler asked.
       </p>
     </div>
   </section>
