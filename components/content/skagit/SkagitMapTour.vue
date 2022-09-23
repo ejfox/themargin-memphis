@@ -42,7 +42,7 @@
 
 <script>
 // import * as d3 from 'd3'
-import { easeQuadIn } from 'd3'
+// import { easeQuadIn } from 'd3'
 // import turf
 import { along, length, distance, bearing } from '@turf/turf'
 import * as mapboxgl from 'mapbox-gl'
@@ -304,7 +304,8 @@ export default {
 
       // get the interpolation between start and end zoom for the scrollPct
       function interpolateZoom(start, end, scrollPct) {
-        const pct = easeQuadIn(scrollPct)
+        // const pct = easeQuadIn(scrollPct)
+        const pct = scrollPct
         return start + (end - start) * pct
       }
 
