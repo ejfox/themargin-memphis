@@ -58,8 +58,8 @@ export default {
       focusedEl: null,
       containerScrollY: 0,
       focused: false,
-      initialZoom: 5,
-      focusedZoom: 9.5,
+      initialZoom: 8.5,
+      focusedZoom: 10.8,
       zoomDuration: 5500,
     }
   },
@@ -121,12 +121,12 @@ export default {
     },
     onMapUnfocused: function () {
       // zoom to first point with focused zoom
-      const startPoint = this.getPositionAlongRoute(skagitRiverTourGeojson, 0)
-      this.map.flyTo({
-        center: startPoint.geometry.coordinates,
-        zoom: this.initialZoom,
-        duration: this.zoomDuration,
-      })
+      // const startPoint = this.getPositionAlongRoute(skagitRiverTourGeojson, 100)
+      // this.map.flyTo({
+      //   center: startPoint.geometry.coordinates,
+      //   zoom: this.initialZoom,
+      //   duration: this.zoomDuration,
+      // })
     },
     onMapFocused: function () {
       // const zoomDuration = 8000
@@ -161,7 +161,8 @@ export default {
           'pk.eyJ1IjoiZWpmb3giLCJhIjoiY2lyZjd0bXltMDA4b2dma3JzNnA0ajh1bSJ9.iCmlE7gmJubz2RtL4RFzIw',
         // center: [-122.08473814464001, 48.51603801371454],
         zoom: this.initialZoom,
-        pitch: 59,
+        //pitch: 59,
+        pitch: 33,
         bearing: 92,
         center: start,
 
@@ -182,6 +183,8 @@ export default {
       const lineFeature = route.features[0]
       // const routeLineString = lineString(lineFeature)
       const routeLineString = lineFeature.geometry
+
+      // get the route length in miles
       const routeLength = length(routeLineString, { units: 'miles' })
 
       // get start and end point from route
@@ -189,14 +192,13 @@ export default {
       const endPoint =
         routeLineString.coordinates[routeLineString.coordinates.length - 1]
 
-      // get the distance between the start and end point
+      // get the distance between the start and end point in miles
       const distanceBetweenStartAndEnd = distance(startPoint, endPoint, {
         units: 'miles',
       })
 
       // get the distance between the start point and the point percentage along the route
-      const distanceBetweenStartAndPosition =
-        distanceBetweenStartAndEnd * positionPercentage
+      const distanceBetweenStartAndPosition = routeLength * positionPercentage
 
       // const pointAlongRoute = along(routeLineString, positionAlongRoute)
       const pointAlongRoute = along(
@@ -204,7 +206,20 @@ export default {
         distanceBetweenStartAndPosition,
         { units: 'miles' }
       )
+
       const pointAlongRouteCoords = pointAlongRoute.geometry.coordinates
+
+      // console.log all variables
+      // console.log(
+      //   {
+      //     routeLength,
+      //     startPoint,
+      //     endPoint,
+      //     distanceBetweenStartAndPosition,
+      //     pointAlongRouteCoords,
+      //   },
+      //   pointAlongRouteCoords
+      // )
       return pointAlongRouteCoords
     },
     onMapLoaded: function () {
@@ -217,9 +232,22 @@ export default {
         url: 'mapbox://mapbox.mapbox-terrain-dem-v1',
       })
 
+      // add hillshade from mapbox.mapbox-terrain-v2
+      this.map.addLayer({
+        id: 'hillshade',
+        source: 'dem',
+        type: 'hillshade',
+        // insert below waterway-river-canal-shadow;
+        // where hillshading sits in the Mapbox Outdoors style
+        before: 'waterway-river-canal-shadow',
+        paint: {
+          'hillshade-exaggeration': 0.15,
+        },
+      })
+
       // add the DEM source as a terrain layer with exaggerated height
-      // this.map.setTerrain({ source: 'dem', exaggeration: 1.75 })
-      this.map.setTerrain({ source: 'dem', exaggeration: 1 })
+      this.map.setTerrain({ source: 'dem', exaggeration: 0.25 })
+      // this.map.setTerrain({ source: 'dem', exaggeration: 1 })
 
       // add skagitRiverTourGeojson line feature to map
       // this.map.addSource('skagitRiverTourGeojson', {
@@ -257,6 +285,119 @@ export default {
       //     'fill-opacity': 0.2,
       //   },
       // })
+
+      // add skagit river multi line string geojson layer as #c60101 line
+      // from mapbox tileset: ejfox.cxot5mj7
+      this.map.addSource('skagit-river', {
+        type: 'vector',
+        url: 'mapbox://ejfox.cxot5mj7',
+      })
+
+      this.map.addLayer({
+        id: 'skagit-river',
+        type: 'line',
+        source: 'skagit-river',
+        'source-layer': 'skagit-river-82g1oy',
+        paint: {
+          'line-color': '#c60101',
+          'line-width': 2.5,
+          // rounded
+          // 'line-cap': 'round',
+          // rounded
+        },
+      })
+
+      // add skagit river text label from skagitRiverLabel
+      this.map.addSource('skagitRiverLabel', {
+        type: 'geojson',
+        data: skagitRiverLabel,
+      })
+
+      this.map.addLayer({
+        id: 'skagitRiverLabel',
+        type: 'symbol',
+        source: 'skagitRiverLabel',
+        layout: {
+          'text-field': 'Skagit River',
+          'text-font': ['Open Sans Bold', 'Arial Unicode MS Bold'],
+          'text-size': 24,
+        },
+        paint: {
+          // 'text-color': '#c60101',
+          // 'text-halo-color': '#fff',
+          'text-color': '#fff',
+          'text-halo-color': '#c60101',
+          'text-halo-width': 2,
+        },
+      })
+
+      // add labels for gorge, diablo, and ross dam labels
+      this.map.addSource('gorgeDamLabel', {
+        type: 'geojson',
+        data: gorgeDamLabel,
+      })
+
+      this.map.addLayer({
+        id: 'gorgeDamLabel',
+        type: 'symbol',
+        source: 'gorgeDamLabel',
+        layout: {
+          'text-field': 'Gorge Dam',
+          'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
+          'text-size': 16,
+        },
+        paint: {
+          // 'text-color': '#c60101',
+          // 'text-halo-color': '#fff',
+          'text-color': '#fff',
+          'text-halo-color': '#c60101',
+          'text-halo-width': 1,
+        },
+      })
+
+      this.map.addSource('diabloDamLabel', {
+        type: 'geojson',
+        data: diabloDamLabel,
+      })
+
+      this.map.addLayer({
+        id: 'diabloDamLabel',
+        type: 'symbol',
+        source: 'diabloDamLabel',
+        layout: {
+          'text-field': 'Diablo Dam',
+          'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
+          'text-size': 16,
+        },
+        paint: {
+          // 'text-color': '#c60101',
+          // 'text-halo-color': '#fff',
+          'text-color': '#fff',
+          'text-halo-color': '#c60101',
+          'text-halo-width': 1,
+        },
+      })
+
+      this.map.addSource('rossDamLabel', {
+        type: 'geojson',
+        data: rossDamLabel,
+      })
+
+      this.map.addLayer({
+        id: 'rossDamLabel',
+        type: 'symbol',
+        source: 'rossDamLabel',
+        layout: {
+          'text-field': 'Ross Dam',
+          'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
+          'text-size': 16,
+        },
+        paint: {
+          'text-color': '#fff',
+          'text-halo-color': '#c60101',
+          'text-halo-width': 1,
+        },
+      })
     },
     onScroll: function (e) {
       this.containerScrollY = this.calcContainerScrollY(e)
@@ -275,32 +416,33 @@ export default {
       const screenHeight = window.innerHeight
 
       // using the height of the root, get the % of the scroll
-      const scrollPct =
-        this.containerScrollY / (containerHeight * 0.5 - screenHeight)
+      // const scrollPct =
+      //   this.containerScrollY / (containerHeight * 0.5 - screenHeight)
 
+      // the proper way to get the height and % of the scroll
+      const scrollPct = this.containerScrollY / (containerHeight - screenHeight)
+
+      // console.log('scrollPct', scrollPct)
+
+      if (scrollPct < 0) return
+      if (scrollPct > 1.25) return
       // get the position along the route
       const positionAlongRoute = this.getPositionAlongRoute(
         skagitRiverTourGeojson,
         scrollPct
       )
 
-      // const nextPositionAlongRoute = this.getPositionAlongRoute(
-      //   skagitRiverTourGeojson,
-      //   scrollPct + 0.5
-      // )
-
+      // get the next position along the route
       const nextPositionAlongRoute = this.getPositionAlongRoute(
         skagitRiverTourGeojson,
         scrollPct + 2
       )
 
+      // figure out the bearing between the two positions
       const currentRouteBearing = bearing(
         positionAlongRoute,
         nextPositionAlongRoute
       )
-
-      const startZoom = this.focusedZoom
-      const endZoom = 12
 
       // get the interpolation between start and end zoom for the scrollPct
       function interpolateZoom(start, end, scrollPct) {
@@ -309,16 +451,22 @@ export default {
         return start + (end - start) * pct
       }
 
-      const easedFocusZoom = interpolateZoom(startZoom, endZoom, scrollPct)
+      const easedFocusZoom = interpolateZoom(
+        this.initialZoom,
+        this.focusedZoom,
+        scrollPct
+      )
 
       if (positionAlongRoute < 0) return
       if (positionAlongRoute > 1) return
 
       // ease map to current route bearing
-      this.map.easeTo({
-        bearing: currentRouteBearing,
-        duration: 0,
-      })
+      if (currentRouteBearing) {
+        this.map.easeTo({
+          bearing: currentRouteBearing,
+          duration: 0,
+        })
+      }
 
       // set the map to that position
       this.map.flyTo({
@@ -394,6 +542,9 @@ const skagitRiverTourGeojson = {
           [-121.337444, 48.626101],
           [-121.255753, 48.671013],
           [-121.210617, 48.696513],
+          [-121.184049, 48.702574],
+          [-121.099806, 48.710051],
+          [-121.068821, 48.731229],
         ],
       },
       id: '43c4e120-89f2-446d-98f9-87ce41d44ea0',
@@ -418,6 +569,67 @@ const skagitRiverTourGeojson = {
     },
   ],
 }
+
+const gorgeDamLabel = {
+  type: 'FeatureCollection',
+  features: [
+    {
+      type: 'Feature',
+      properties: {
+        shape: 'Marker',
+        name: 'Unnamed Layer',
+        category: 'default',
+      },
+      geometry: {
+        type: 'Point',
+        coordinates: [-121.208425, 48.697943],
+      },
+      id: 'cd554554-84a9-4380-b96f-98d432e951c4',
+    },
+  ],
+}
+
+const diabloDamLabel = {
+  type: 'Feature',
+  properties: {
+    shape: 'Marker',
+    name: 'Unnamed Layer',
+    category: 'default',
+  },
+  geometry: {
+    type: 'Point',
+    coordinates: [-121.132021, 48.713817],
+  },
+  id: 'fc7be170-5d3e-4156-83b6-5a22c7dd6fb2',
+}
+
+const rossDamLabel = {
+  type: 'Feature',
+  properties: {
+    shape: 'Marker',
+    name: 'Unnamed Layer',
+    category: 'default',
+  },
+  geometry: {
+    type: 'Point',
+    coordinates: [-121.068093, 48.731851],
+  },
+  id: '630c6d96-355f-4352-a01a-4476e0822f54',
+}
+
+const skagitRiverLabel = {
+  type: 'Feature',
+  properties: {
+    shape: 'Marker',
+    name: 'Unnamed Layer',
+    category: 'default',
+  },
+  geometry: {
+    type: 'Point',
+    coordinates: [-122.37039, 48.383846],
+  },
+  id: 'd7194808-c284-43c7-92f6-c67f94674b3a',
+}
 </script>
 
 <style scoped>
@@ -432,11 +644,12 @@ const skagitRiverTourGeojson = {
 .hero-map-container {
   /* position: sticky;
   top: 1rem; */
-  height: 1200vh;
+  /*height: 320vh;*/
 }
 
 p {
-  margin-bottom: 48vh;
+  margin-bottom: 66vh;
+
   padding: 2em 1.2em;
   margin-left: 2vw;
   margin-right: 2vw;
