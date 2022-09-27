@@ -28,8 +28,12 @@
         Following this, S.g[\[3\]](#ftnt3)wǝdílic prepared to leave. “I’m going
         to be power now,” he said. S.g[\[4\]](#ftnt4)wǝdílic said the Upper
         Skagit would later find him, and then dove into the depths of the river
-        beneath Skagit Falls. Schuyler said the project, along with logging and
-        mining in the upper reaches of the river, detracts from the purity of
+        beneath Skagit Falls.
+      </p>
+
+      <p>
+        Schuyler said the project, along with logging and mining in the upper
+        reaches of the river, detracts from the purity of
         S.g[\[5\]](#ftnt5)wǝdílic’s power, Indian Power, which in the Upper
         Skagit’s sense of being, is interlinked with salmon. “For every action
         there is an effect,” he said, referring to the hydroelectric dams. “Who
@@ -58,8 +62,8 @@ export default {
       focusedEl: null,
       containerScrollY: 0,
       focused: false,
-      initialZoom: 8.5,
-      focusedZoom: 10.8,
+      initialZoom: 7.9,
+      focusedZoom: 14.2,
       zoomDuration: 5500,
     }
   },
@@ -162,8 +166,8 @@ export default {
         // center: [-122.08473814464001, 48.51603801371454],
         zoom: this.initialZoom,
         //pitch: 59,
-        pitch: 33,
-        bearing: 92,
+        //pitch: 33,
+        //bearing: 92,
         center: start,
 
         // 'pk.eyJ1IjoiZWpmb3giLCJhIjoiY2lyZjd0bXltMDA4b2dma3JzNnA0ajh1bSJ9.iCmlE7gmJubz2RtL4RFzIw',
@@ -246,7 +250,9 @@ export default {
       })
 
       // add the DEM source as a terrain layer with exaggerated height
-      this.map.setTerrain({ source: 'dem', exaggeration: 0.25 })
+      // this.map.setTerrain({ source: 'dem', exaggeration: 0.25 })
+      this.map.setTerrain({ source: 'dem', exaggeration: 0.5 })
+
       // this.map.setTerrain({ source: 'dem', exaggeration: 1 })
 
       // add skagitRiverTourGeojson line feature to map
@@ -444,6 +450,18 @@ export default {
         nextPositionAlongRoute
       )
 
+      function interpolate(start, end, scrollPct) {
+        // const pct = easeQuadIn(scrollPct)
+        const pct = scrollPct
+        return start + (end - start) * pct
+      }
+
+      // add ability to change pitch from 0-65 based on scrollPct
+      const scrollPitch = interpolate(0, 78, scrollPct)
+
+      // add ability to change bearing from 0-95 based on scrollPct
+      const scrollBearing = interpolate(0, 55, scrollPct)
+
       // get the interpolation between start and end zoom for the scrollPct
       function interpolateZoom(start, end, scrollPct) {
         // const pct = easeQuadIn(scrollPct)
@@ -463,7 +481,9 @@ export default {
       // ease map to current route bearing
       if (currentRouteBearing) {
         this.map.easeTo({
-          bearing: currentRouteBearing,
+          // bearing: currentRouteBearing,
+          bearing: scrollBearing,
+          pitch: scrollPitch,
           duration: 0,
         })
       }
